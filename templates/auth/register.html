@@ -1,0 +1,111 @@
+{% extends "layout/auth.html" %} {% block title %} AIML | Register {% endblock
+%} {% block content %}
+<div class="register-box">
+  <div class="card card-outline card-primary">
+    <div class="card-header text-center">
+      <a href="/home" class="h1"><b>AIML</b>Chatbot</a>
+    </div>
+    <div class="card-body">
+      <p class="login-box-msg">Register a new membership</p>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      <!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+      {% if messages %} {% for category, message in messages %}
+      <div class="alert alert-{{ category }} alert-dismissible" role="alert">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+        {{ message }}
+      </div>
+      {% endfor %} {% endif %} {% endwith %}
+      <form action="{{ url_for('register') }}" method="post">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Full name"
+            name="fullname"
+            required
+          />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            name="username"
+            required
+          />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email"
+            name="email"
+            required
+          />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            name="password"
+            required
+          />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input
+                type="checkbox"
+                id="agreeTerms"
+                name="terms"
+                value="agree"
+              />
+              <label for="agreeTerms">
+                I agree to the <a href="#">terms</a>
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">
+              Register
+            </button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+      <a href="/login" class="text-center">I already have a membership</a>
+    </div>
+    <!-- /.form-box -->
+  </div>
+  <!-- /.card -->
+</div>
+{% endblock %}

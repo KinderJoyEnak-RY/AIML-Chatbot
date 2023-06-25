@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+		<pattern>NAMA SAYA *</pattern>
+		<template>
+			<think><set name="username"><star/></set></think>
+			hi <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+		</template>
+	</category>
+	<category>
+			<pattern>NAMA *</pattern>
+			<template>
+					<think><set name="username"><star/></set></think>
+					hi <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+			</template>
+	</category>
+	<category>
+			<pattern>* NAMA *</pattern>
+			<template>Nama kamu adalah <srai>GET NAME</srai>.</template>
+	</category>
+	<category>
+			<pattern>GET NAME</pattern>
+			<template><get name="username"/></template>
+	</category>
+
+  <category>
+	<pattern>BYE</pattern>
+  <template>
+      okay, <get name="username"/> Terima kasih atas percakapannya!
+  </template>  
+</category>
+<category>
+  <pattern>TERIMA KASIH</pattern>
+  <template>
+      okay, <get name="username"/> Terima kasih atas percakapannya!
+  </template>  
+</category>
+	 
+	<category> 
+		<pattern>ASSALAMUALAIKUM</pattern>
+		<template>
+			waalaikumsalam wr. wb, ada yang bisa di bantu?
+		</template>
+	</category>
+
+	<category>
+		<pattern>* ASSALAMUALAIKUM </pattern>
+		<template>
+			<srai>ASSALAMUALAIKUM</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> ASSALAMUALAIKUM *</pattern>
+		<template>
+			<srai>ASSALAMUALAIKUM</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* ASSALAMUALAIKUM *</pattern>
+		<template>
+			<srai>ASSALAMUALAIKUM</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>SALAM</pattern>
+		<template>
+			waalaikumsalam wr. wb, ada yang bisa di bantu?
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SALAM </pattern>
+		<template>
+			<srai>SALAM</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SALAM *</pattern>
+		<template>
+			<srai>SALAM</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SALAM *</pattern>
+		<template>
+			<srai>SALAM</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>JUDUL</pattern>
+		<template>
+			Berikut tahapan pendaftaran judul atau topik metopen : ((/br))
+
+1. KRS matkul metopen, Selanjutnya akan diperiksa prasyarat oleh Prodi. Jika tidak memenuhi syarat pengajuan Metopen, maka akan dihapus. tidak mengambil KP/MTP bersamaan dengan Metopen.((/br))
+
+2. Tentukan topik penelitian (judul sendiri/dari Dosen). Misal : RPL, Data Mining, Sistem Informasi, SC, KK, Jaringan Komputer, dll. Jika judul dari Dosen, maka dibimbing oleh Dosen yang bersangkutan.((/br))
+
+3. Mencari min 3 pustaka pendukung (Jurnal Nasional/Internasional atau Seminar Nasional/Internasional).((/br))
+
+4. Mahasiswa dapat mengidentifikasi penulis, judul, volume, nomor dan tahun terbit jurnal. begitupun dengan naskah yang dimuat di Seminar.((/br))
+
+5. Melakukan review naskah publikasi pendukung penelitian tersebut dan konsultasikan dengan dosen pembimbing akademik/dosen wali.((/br))
+
+6. Mengisi form pengkajian judul (FR-Metopen-01), dapat di download melalui ((a href="https://s.uad.id/form_metopentif"))Form Metopen TIF((/a)) dan dospem akademik akan memastikan kelayakan topik metopen.((/br))
+
+7. setelah mendapat ACC dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((/br))
+
+8. Setelah mendapat ACC calon dospem, mahasiswa mengisi form pengajuan dan upload berkas point no. 6 melalui ((a href="https://s.uad.id/pra_metopen"))Form Pengajuan dan Upload Berkas((/a))((/br))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* JUDUL </pattern>
+		<template>
+			<srai>JUDUL</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> JUDUL *</pattern>
+		<template>
+			<srai>JUDUL</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* JUDUL *</pattern>
+		<template>
+			<srai>JUDUL</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>TOPIK</pattern>
+		<template>
+			Berikut tahapan pendaftaran judul atau topik metopen : ((/br))
+
+1. KRS matkul metopen, Selanjutnya akan diperiksa prasyarat oleh Prodi. Jika tidak memenuhi syarat pengajuan Metopen, maka akan dihapus. tidak mengambil KP/MTP bersamaan dengan Metopen.((/br))
+
+2. Tentukan topik penelitian (judul sendiri/dari Dosen). Misal : RPL, Data Mining, Sistem Informasi, SC, KK, Jaringan Komputer, dll. Jika judul dari Dosen, maka dibimbing oleh Dosen yang bersangkutan.((/br))
+
+3. Mencari min 3 pustaka pendukung (Jurnal Nasional/Internasional atau Seminar Nasional/Internasional).((/br))
+
+4. Mahasiswa dapat mengidentifikasi penulis, judul, volume, nomor dan tahun terbit jurnal. begitupun dengan naskah yang dimuat di Seminar.((/br))
+
+5. Melakukan review naskah publikasi pendukung penelitian tersebut dan konsultasikan dengan dosen pembimbing akademik/dosen wali.((/br))
+
+6. Mengisi form pengkajian judul (FR-Metopen-01), dapat di download melalui ((a href="https://s.uad.id/form_metopentif"))Form Metopen TIF((/a)) dan dospem akademik akan memastikan kelayakan topik metopen.((/br))
+
+7. setelah mendapat ACC dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((/br))
+
+8. Setelah mendapat ACC calon dospem, mahasiswa mengisi form pengajuan dan upload berkas point no. 6 melalui ((a href="https://s.uad.id/pra_metopen"))Form Pengajuan dan Upload Berkas((/a))((/br))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* TOPIK </pattern>
+		<template>
+			<srai>TOPIK</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> TOPIK *</pattern>
+		<template>
+			<srai>TOPIK</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* TOPIK *</pattern>
+		<template>
+			<srai>TOPIK</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>TAHAPAN</pattern>
+		<template>
+			Berikut tahapan pendaftaran judul atau topik metopen : ((/br)) 1. KRS matkul metopen, Selanjutnya akan diperiksa prasyarat oleh Prodi. Jika tidak memenuhi syarat pengajuan Metopen, maka akan dihapus. tidak mengambil KP/MTP bersamaan dengan Metopen.((/br)) 2. Tentukan topik penelitian (judul sendiri/dari Dosen). Misal : RPL, Data Mining, Sistem Informasi, SC, KK, Jaringan Komputer, dll. Jika judul dari Dosen, maka dibimbing oleh Dosen yang bersangkutan.((/br)) 3. Mencari min 3 pustaka pendukung (Jurnal Nasional/Internasional atau Seminar Nasional/Internasional).((/br)) 4. Mahasiswa dapat mengidentifikasi penulis, judul, volume, nomor dan tahun terbit jurnal. begitupun dengan naskah yang dimuat di Seminar.((/br)) 5. Melakukan review naskah publikasi pendukung penelitian tersebut dan konsultasikan dengan dosen pembimbing akademik/dosen wali.((/br)) 6. Mengisi form pengkajian judul (FR-Metopen-01), dapat di download melalui ((a href="https://s.uad.id/form_metopentif"))Form Metopen TIF((/a)) dan dospem akademik akan memastikan kelayakan topik metopen.((/br)) 7. setelah mendapat ACC dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((/br)) 8. Setelah mendapat ACC calon dospem, mahasiswa mengisi form pengajuan dan upload berkas point no. 6 melalui ((a href="https://s.uad.id/pra_metopen"))Form Pengajuan dan Upload Berkas((/a))((/br))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* TAHAPAN </pattern>
+		<template>
+			<srai>TAHAPAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> TAHAPAN *</pattern>
+		<template>
+			<srai>TAHAPAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* TAHAPAN *</pattern>
+		<template>
+			<srai>TAHAPAN</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>PELAKSANAAN</pattern>
+		<template>
+			Berikut pelaksanaan Metodologi Penelitian : ((/br))
+
+1. Hasil kuliah Metopen adalah Proposal Skripsi (Skripsi ditempuh pada semester berikutnya). Metopen memiliki 2 kegiatan utama yaitu perkuliahan dikelas (sesuai kelas) dan pembimbingan dengan dospem metopen. Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan). Pastikan sudah melakukan aktivitas Pra-Metopen.((/br))
+
+2. UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satunya, akan dianggap gagal kuliah metopen pada semester itu. Berbeda dengan UAS kuliah lainnya. UAS metopen adalah Seminar Proposal.
+		</template>
+	</category>
+
+	<category>
+		<pattern>* PELAKSANAAN </pattern>
+		<template>
+			<srai>PELAKSANAAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> PELAKSANAAN *</pattern>
+		<template>
+			<srai>PELAKSANAAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* PELAKSANAAN *</pattern>
+		<template>
+			<srai>PELAKSANAAN</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>METODOLOGI PENELITIAN</pattern>
+		<template>
+			Berikut pelaksanaan Metodologi Penelitian : ((/br))
+
+1. Hasil kuliah Metopen adalah Proposal Skripsi (Skripsi ditempuh pada semester berikutnya). Metopen memiliki 2 kegiatan utama yaitu perkuliahan dikelas (sesuai kelas) dan pembimbingan dengan dospem metopen. Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan). Pastikan sudah melakukan aktivitas Pra-Metopen.((/br))
+
+2. UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satunya, akan dianggap gagal kuliah metopen pada semester itu. Berbeda dengan UAS kuliah lainnya. UAS metopen adalah Seminar Proposal.
+		</template>
+	</category>
+
+	<category>
+		<pattern>* METODOLOGI PENELITIAN </pattern>
+		<template>
+			<srai>METODOLOGI PENELITIAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> METODOLOGI PENELITIAN *</pattern>
+		<template>
+			<srai>METODOLOGI PENELITIAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* METODOLOGI PENELITIAN *</pattern>
+		<template>
+			<srai>METODOLOGI PENELITIAN</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>METOPEN</pattern>
+		<template>
+			Berikut pelaksanaan Metodologi Penelitian : ((/br))
+
+1. Hasil kuliah Metopen adalah Proposal Skripsi (Skripsi ditempuh pada semester berikutnya). Metopen memiliki 2 kegiatan utama yaitu perkuliahan dikelas (sesuai kelas) dan pembimbingan dengan dospem metopen. Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan). Pastikan sudah melakukan aktivitas Pra-Metopen.((/br))
+
+2. UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satunya, akan dianggap gagal kuliah metopen pada semester itu. Berbeda dengan UAS kuliah lainnya. UAS metopen adalah Seminar Proposal.
+		</template>
+	</category>
+
+	<category>
+		<pattern>* METOPEN </pattern>
+		<template>
+			<srai>METOPEN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> METOPEN *</pattern>
+		<template>
+			<srai>METOPEN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* METOPEN *</pattern>
+		<template>
+			<srai>METOPEN</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>PENGAJUAN</pattern>
+		<template>
+			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : ((a href="https://s.uad.id/reg_semprop_tif" target="_blank"))Pendaftaran Seminar Proposal((/a))((br))((/br))
+
+Persyaratannya :((/br))
+
+1. Naskah Proposal (acc Pembimbing)((/br))
+
+2. Logbook bimbingan minimal 10x((/br))
+
+3. Transkrip Nilai((/br))
+
+4. TOEFL (min. 400)((/br))
+
+5. Bukti Pembayaran Seminar Proposal (75rb)((/br))
+
+6. Screenshot isian/upload SKPI di portal((/br))
+
+7. Sertifikat Pelatihan Literasi dari perpustakaan((/br))
+
+8. Hasil Check Similarity dokumen proposal maksimal 25%
+		</template>
+	</category>
+
+	<category>
+		<pattern>* PENGAJUAN </pattern>
+		<template>
+			<srai>PENGAJUAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> PENGAJUAN *</pattern>
+		<template>
+			<srai>PENGAJUAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* PENGAJUAN *</pattern>
+		<template>
+			<srai>PENGAJUAN</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>SYARAT</pattern>
+		<template>
+			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : ((a href="https://s.uad.id/reg_semprop_tif"))Pendaftaran Seminar Proposal((/a))((br))((/br))
+
+			Persyaratannya :((/br))
+
+			1. Naskah Proposal (acc Pembimbing)((/br))
+
+			2. Logbook bimbingan minimal 10x((/br))
+
+			3. Transkrip Nilai((/br))
+
+			4. TOEFL (min. 400)((/br))
+
+			5. Bukti Pembayaran Seminar Proposal (75rb)((/br))
+
+			6. Screenshot isian/upload SKPI di portal((/br))
+
+			7. Sertifikat Pelatihan Literasi dari perpustakaan((/br))
+
+			8. Hasil Check Similarity dokumen proposal maksimal 25%
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SYARAT </pattern>
+		<template>
+			<srai>SYARAT</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SYARAT *</pattern>
+		<template>
+			<srai>SYARAT</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SYARAT *</pattern>
+		<template>
+			<srai>SYARAT</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>DAFTAR</pattern>
+		<template>
+			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : ((a href="https://s.uad.id/reg_semprop_tif"))Pendaftaran Seminar Proposal((/a))((br))((/br)) Persyaratannya :((/br)) 1. Naskah Proposal (acc Pembimbing)((/br)) 2. Logbook bimbingan minimal 10x((/br)) 3. Transkrip Nilai((/br)) 4. TOEFL (min. 400)((/br)) 5. Bukti Pembayaran Seminar Proposal (75rb)((/br)) 6. Screenshot isian/upload SKPI di portal((/br)) 7. Sertifikat Pelatihan Literasi dari perpustakaan((/br)) 8. Hasil Check Similarity dokumen proposal maksimal 25%
+		</template>
+	</category>
+
+	<category>
+		<pattern>* DAFTAR </pattern>
+		<template>
+			<srai>DAFTAR</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> DAFTAR *</pattern>
+		<template>
+			<srai>DAFTAR</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* DAFTAR *</pattern>
+		<template>
+			<srai>DAFTAR</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>PENDAFTARAN</pattern>
+		<template>
+			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : ((a href="https://s.uad.id/reg_semprop_tif"))Pendaftaran Seminar Proposal((/a))((br))((/br))
+
+			Persyaratannya :((/br))
+
+			1. Naskah Proposal (acc Pembimbing)((/br))
+
+			2. Logbook bimbingan minimal 10x((/br))
+
+			3. Transkrip Nilai((/br))
+
+			4. TOEFL (min. 400)((/br))
+
+			5. Bukti Pembayaran Seminar Proposal (75rb)((/br))
+
+			6. Screenshot isian/upload SKPI di portal((/br))
+
+			7. Sertifikat Pelatihan Literasi dari perpustakaan((/br))
+
+			8. Hasil Check Similarity dokumen proposal maksimal 25%
+		</template>
+	</category>
+
+	<category>
+		<pattern>* PENDAFTARAN </pattern>
+		<template>
+			<srai>PENDAFTARAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> PENDAFTARAN *</pattern>
+		<template>
+			<srai>PENDAFTARAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* PENDAFTARAN *</pattern>
+		<template>
+			<srai>PENDAFTARAN</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>SEMINAR PROPOSAL</pattern>
+		<template>
+			1. Mahasiswa membayar sempro ke bank dengan jenis pembayaran SEMINAR PROPOSAL sebesar Rp. 75.000. Jika mengulang maka bayar dengan jenis pembayaran LAIN-LAIN sebesar Rp. 75.000.((/br))
+
+			2. Setelah mahasiswa mendaftar melalui form pendaftaran maka mahasiswa akan mendapatkan notifikasi email berupa jadwal sempro beserta daftar pengujinya. Selanjutnya naskah dan berita acara sempro akan diinfokan bersamaan dengan jadwal yang telah diagendakan melalui link dalam Google Calendar.((/br))
+
+			3. Mahasiswa dan penguji wajib menandatangi berita acara sempro untuk selanjutnya diproses oleh staf prodi dan diteruskan ke kantor Tata Usaha.
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SEMINAR PROPOSAL </pattern>
+		<template>
+			<srai>SEMINAR PROPOSAL</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SEMINAR PROPOSAL *</pattern>
+		<template>
+			<srai>SEMINAR PROPOSAL</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SEMINAR PROPOSAL *</pattern>
+		<template>
+			<srai>SEMINAR PROPOSAL</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>SEMPRO</pattern>
+		<template>
+			1. Mahasiswa membayar sempro ke bank dengan jenis pembayaran SEMINAR PROPOSAL sebesar Rp. 75.000. Jika mengulang maka bayar dengan jenis pembayaran LAIN-LAIN sebesar Rp. 75.000.((/br))
+
+			2. Setelah mahasiswa mendaftar melalui form pendaftaran maka mahasiswa akan mendapatkan notifikasi email berupa jadwal sempro beserta daftar pengujinya. Selanjutnya naskah dan berita acara sempro akan diinfokan bersamaan dengan jadwal yang telah diagendakan melalui link dalam Google Calendar.((/br))
+
+			3. Mahasiswa dan penguji wajib menandatangi berita acara sempro untuk selanjutnya diproses oleh staf prodi dan diteruskan ke kantor Tata Usaha.
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SEMPRO </pattern>
+		<template>
+			<srai>SEMPRO</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SEMPRO *</pattern>
+		<template>
+			<srai>SEMPRO</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SEMPRO *</pattern>
+		<template>
+			<srai>SEMPRO</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>BERKAS</pattern>
+		<template>
+			Mahasiswa yang membutuhkan Surat Pengantar Rekomendasi Penelitian, silahkan mengisi form berikut ((a href = "https://s.uad.id/rekomendasi-penelitian-tif"))Surat Pengantar Rekomendasi Penelitian (Riset)((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* BERKAS </pattern>
+		<template>
+			<srai>BERKAS</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> BERKAS *</pattern>
+		<template>
+			<srai>BERKAS</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* BERKAS *</pattern>
+		<template>
+			<srai>BERKAS</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>SURAT</pattern>
+		<template>
+			Mahasiswa yang membutuhkan Surat Pengantar Rekomendasi Penelitian, silahkan mengisi form berikut ((a href = "https://s.uad.id/rekomendasi-penelitian-tif"))Surat Pengantar Rekomendasi Penelitian (Riset)((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SURAT </pattern>
+		<template>
+			<srai>SURAT</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SURAT *</pattern>
+		<template>
+			<srai>SURAT</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SURAT *</pattern>
+		<template>
+			<srai>SURAT</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>PENGANTAR</pattern>
+		<template>
+			Mahasiswa yang membutuhkan Surat Pengantar Rekomendasi Penelitian, silahkan mengisi form berikut ((a href = "https://s.uad.id/rekomendasi-penelitian-tif"))Surat Pengantar Rekomendasi Penelitian (Riset)((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* PENGANTAR </pattern>
+		<template>
+			<srai>PENGANTAR</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> PENGANTAR *</pattern>
+		<template>
+			<srai>PENGANTAR</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* PENGANTAR *</pattern>
+		<template>
+			<srai>PENGANTAR</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>REKOMENDASI</pattern>
+		<template>
+			Mahasiswa yang membutuhkan Surat Pengantar Rekomendasi Penelitian, silahkan mengisi form berikut ((a href = "https://s.uad.id/rekomendasi-penelitian-tif"))Surat Pengantar Rekomendasi Penelitian (Riset)((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* REKOMENDASI </pattern>
+		<template>
+			<srai>REKOMENDASI</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> REKOMENDASI *</pattern>
+		<template>
+			<srai>REKOMENDASI</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* REKOMENDASI *</pattern>
+		<template>
+			<srai>REKOMENDASI</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>PENELITIAN</pattern>
+		<template>
+			Mahasiswa yang membutuhkan Surat Pengantar Rekomendasi Penelitian, silahkan mengisi form berikut ((a href = "https://s.uad.id/rekomendasi-penelitian-tif"))Surat Pengantar Rekomendasi Penelitian (Riset)((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* PENELITIAN </pattern>
+		<template>
+			<srai>PENELITIAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> PENELITIAN *</pattern>
+		<template>
+			<srai>PENELITIAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* PENELITIAN *</pattern>
+		<template>
+			<srai>PENELITIAN</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>KOORDINATOR</pattern>
+		<template>
+			Berikut adalah nama dari koordinator Metodologi Penelitian : ((/br))
+
+Nama : Supriyanto S.T., M.T((/br))
+
+Email : supriyanto@tif.uad.ac.id
+		</template>
+	</category>
+
+	<category>
+		<pattern>* KOORDINATOR </pattern>
+		<template>
+			<srai>KOORDINATOR</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> KOORDINATOR *</pattern>
+		<template>
+			<srai>KOORDINATOR</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* KOORDINATOR *</pattern>
+		<template>
+			<srai>KOORDINATOR</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>LAPORAN</pattern>
+		<template>
+			Berikut adalah Urutan dalam penyusunan laporan metopen : ((/br))
+
+1.	Halaman cover ((/br))
+
+2.	Daftar isi ((/br))
+
+3.	Daftar gambar (jika ada) ((/br))
+
+4.	Daftar tabel (jika ada) ((/br))
+
+5.	Abstrak ((/br))
+
+6.	BAB 1 ((/br))
+
+7.	BAB 2 ((/br))
+
+8.	BAB 3 ((/br))
+
+9.	Daftar Pustaka
+		</template>
+	</category>
+
+	<category>
+		<pattern>* LAPORAN </pattern>
+		<template>
+			<srai>LAPORAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> LAPORAN *</pattern>
+		<template>
+			<srai>LAPORAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* LAPORAN *</pattern>
+		<template>
+			<srai>LAPORAN</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>PENYUSUNAN</pattern>
+		<template>
+			Berikut adalah Urutan dalam penyusunan laporan metopen : ((/br))
+
+1.	Halaman cover ((/br))
+
+2.	Daftar isi ((/br))
+
+3.	Daftar gambar (jika ada) ((/br))
+
+4.	Daftar tabel (jika ada) ((/br))
+
+5.	Abstrak ((/br))
+
+6.	BAB 1 ((/br))
+
+7.	BAB 2 ((/br))
+
+8.	BAB 3 ((/br))
+
+9.	Daftar Pustaka
+		</template>
+	</category>
+
+	<category>
+		<pattern>* PENYUSUNAN </pattern>
+		<template>
+			<srai>PENYUSUNAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> PENYUSUNAN *</pattern>
+		<template>
+			<srai>PENYUSUNAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* PENYUSUNAN *</pattern>
+		<template>
+			<srai>PENYUSUNAN</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>BAB 1</pattern>
+		<template>
+			BAB 1 Pendahuluan((/br))
+
+1. Latar Belakang Masalah : Mengidentifikasi latar belakang masalah. Uraian dalam latar belakang dari hal yang umum menuju hal yang khusus mengerucut ke permasalahan inti yang akan diselesaikan dalam penelitian ini.((/br))
+
+2. Rumusan Masalah : Rumusan masalah berisi pernyataan mengenai permasalahan dan disertai pertanyaan penelitian.((/br))
+
+3. Batasan Masalah Penelitian (jika diperlukan) : ruang lingkup untuk membatasi lingkup permasalahan dengan memilih masalah khusus/ inti yang telah disebutkan di bagian identifikasi masalah, sehingga tidak terlalu luas untuk diselesaikan atau diberi solusi dalam penelitian yang akan dilakukan.((/br))
+
+4. Tujuan Penelitian : menyelesaikan masalah dengan pendekatan keilmuan tertentu.((/br))
+
+5. Manfaat Penelitian : Pernyataan manfaat penelitian harus menunjukkan kontribusi pengetahuan atau dirasakan langsung oleh stakeholder.((br))((/br))
+
+Untuk format laporan dapat dilihat pada link berikut ((a href="https://tif.uad.ac.id/wp-content/uploads/Final-Buku-Panduan-Skripsi-Versi-2022.pdf"))Format Laporan((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* BAB 1 </pattern>
+		<template>
+			<srai>BAB 1</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> BAB 1 *</pattern>
+		<template>
+			<srai>BAB 1</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* BAB 1 *</pattern>
+		<template>
+			<srai>BAB 1</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>ISI BAB 1</pattern>
+		<template>
+			BAB 1 Pendahuluan((/br))
+
+1. Latar Belakang Masalah : Mengidentifikasi latar belakang masalah. Uraian dalam latar belakang dari hal yang umum menuju hal yang khusus mengerucut ke permasalahan inti yang akan diselesaikan dalam penelitian ini.((/br))
+
+2. Rumusan Masalah : Rumusan masalah berisi pernyataan mengenai permasalahan dan disertai pertanyaan penelitian.((/br))
+
+3. Batasan Masalah Penelitian (jika diperlukan) : ruang lingkup untuk membatasi lingkup permasalahan dengan memilih masalah khusus/ inti yang telah disebutkan di bagian identifikasi masalah, sehingga tidak terlalu luas untuk diselesaikan atau diberi solusi dalam penelitian yang akan dilakukan.((/br))
+
+4. Tujuan Penelitian : menyelesaikan masalah dengan pendekatan keilmuan tertentu.((/br))
+
+5. Manfaat Penelitian : Pernyataan manfaat penelitian harus menunjukkan kontribusi pengetahuan atau dirasakan langsung oleh stakeholder.((br))((/br))
+
+Untuk format laporan dapat dilihat pada link berikut ((a href="https://tif.uad.ac.id/wp-content/uploads/Final-Buku-Panduan-Skripsi-Versi-2022.pdf"))Format Laporan((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* ISI BAB 1 </pattern>
+		<template>
+			<srai>ISI BAB 1</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> ISI BAB 1 *</pattern>
+		<template>
+			<srai>ISI BAB 1</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* ISI BAB 1 *</pattern>
+		<template>
+			<srai>ISI BAB 1</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>SUSUNAN BAB 1</pattern>
+		<template>
+			BAB 1 Pendahuluan((/br))
+
+1. Latar Belakang Masalah : Mengidentifikasi latar belakang masalah. Uraian dalam latar belakang dari hal yang umum menuju hal yang khusus mengerucut ke permasalahan inti yang akan diselesaikan dalam penelitian ini.((/br))
+
+2. Rumusan Masalah : Rumusan masalah berisi pernyataan mengenai permasalahan dan disertai pertanyaan penelitian.((/br))
+
+3. Batasan Masalah Penelitian (jika diperlukan) : ruang lingkup untuk membatasi lingkup permasalahan dengan memilih masalah khusus/ inti yang telah disebutkan di bagian identifikasi masalah, sehingga tidak terlalu luas untuk diselesaikan atau diberi solusi dalam penelitian yang akan dilakukan.((/br))
+
+4. Tujuan Penelitian : menyelesaikan masalah dengan pendekatan keilmuan tertentu.((/br))
+
+5. Manfaat Penelitian : Pernyataan manfaat penelitian harus menunjukkan kontribusi pengetahuan atau dirasakan langsung oleh stakeholder.((br))((/br))
+
+Untuk format laporan dapat dilihat pada link berikut ((a href="https://tif.uad.ac.id/wp-content/uploads/Final-Buku-Panduan-Skripsi-Versi-2022.pdf"))Format Laporan((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SUSUNAN BAB 1 </pattern>
+		<template>
+			<srai>SUSUNAN BAB 1</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SUSUNAN BAB 1 *</pattern>
+		<template>
+			<srai>SUSUNAN BAB 1</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SUSUNAN BAB 1 *</pattern>
+		<template>
+			<srai>SUSUNAN BAB 1</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>BAB 2</pattern>
+		<template>
+			BAB 2 Tinjauan Pustaka((/br))
+
+Berisi kajian hasil penelitian terdahulu yang terkait dengan penelitian yang dilakukan.((/br))
+
+1. Kajian Penelitian Terdahulu((/br))
+
+Membahas penelitian sebelumnya yang berkaitan dengan judul yang diambil sehingga bisa membedakan antara penelitian yang dilakukan dengan penelitian sebelumnya.((/br))
+
+2. Kajian Software Terdahulu (jika ada)((/br))
+
+Sub bab ini bersifat opsional. Hanya dilengkapi jika ada software sejenis yang beredar di internet dengan penelitian yang akan dilakukan.((/br))
+
+3. Landasan Teori((/br))
+
+Keberadaan landasan teori menjadi bagian penting dalam penelitian ilmiah. Landasan teori yang perlu dikemukakan adalah tentang teori atau konsep yang erat kaitannya dengan permasalahan penelitian.((br))((/br))
+
+Untuk format laporan dapat dilihat pada link berikut ((a href="https://tif.uad.ac.id/wp-content/uploads/Final-Buku-Panduan-Skripsi-Versi-2022.pdf"))Format Laporan((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* BAB 2 </pattern>
+		<template>
+			<srai>BAB 2</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> BAB 2 *</pattern>
+		<template>
+			<srai>BAB 2</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* BAB 2 *</pattern>
+		<template>
+			<srai>BAB 2</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>ISI BAB 2</pattern>
+		<template>
+			BAB 2 Tinjauan Pustaka((/br))
+
+Berisi kajian hasil penelitian terdahulu yang terkait dengan penelitian yang dilakukan.((/br))
+
+1. Kajian Penelitian Terdahulu((/br))
+
+Membahas penelitian sebelumnya yang berkaitan dengan judul yang diambil sehingga bisa membedakan antara penelitian yang dilakukan dengan penelitian sebelumnya.((/br))
+
+2. Kajian Software Terdahulu (jika ada)((/br))
+
+Sub bab ini bersifat opsional. Hanya dilengkapi jika ada software sejenis yang beredar di internet dengan penelitian yang akan dilakukan.((/br))
+
+3. Landasan Teori((/br))
+
+Keberadaan landasan teori menjadi bagian penting dalam penelitian ilmiah. Landasan teori yang perlu dikemukakan adalah tentang teori atau konsep yang erat kaitannya dengan permasalahan penelitian.((br))((/br))
+
+Untuk format laporan dapat dilihat pada link berikut ((a href="https://tif.uad.ac.id/wp-content/uploads/Final-Buku-Panduan-Skripsi-Versi-2022.pdf"))Format Laporan((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* ISI BAB 2 </pattern>
+		<template>
+			<srai>ISI BAB 2</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> ISI BAB 2 *</pattern>
+		<template>
+			<srai>ISI BAB 2</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* ISI BAB 2 *</pattern>
+		<template>
+			<srai>ISI BAB 2</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>SUSUNAN BAB 2</pattern>
+		<template>
+			BAB 2 Tinjauan Pustaka((/br))
+
+Berisi kajian hasil penelitian terdahulu yang terkait dengan penelitian yang dilakukan.((/br))
+
+1. Kajian Penelitian Terdahulu((/br))
+
+Membahas penelitian sebelumnya yang berkaitan dengan judul yang diambil sehingga bisa membedakan antara penelitian yang dilakukan dengan penelitian sebelumnya.((/br))
+
+2. Kajian Software Terdahulu (jika ada)((/br))
+
+Sub bab ini bersifat opsional. Hanya dilengkapi jika ada software sejenis yang beredar di internet dengan penelitian yang akan dilakukan.((/br))
+
+3. Landasan Teori((/br))
+
+Keberadaan landasan teori menjadi bagian penting dalam penelitian ilmiah. Landasan teori yang perlu dikemukakan adalah tentang teori atau konsep yang erat kaitannya dengan permasalahan penelitian.((br))((/br))
+
+Untuk format laporan dapat dilihat pada link berikut ((a href="https://tif.uad.ac.id/wp-content/uploads/Final-Buku-Panduan-Skripsi-Versi-2022.pdf"))Format Laporan((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SUSUNAN BAB 2 </pattern>
+		<template>
+			<srai>SUSUNAN BAB 2</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SUSUNAN BAB 2 *</pattern>
+		<template>
+			<srai>SUSUNAN BAB 2</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SUSUNAN BAB 2 *</pattern>
+		<template>
+			<srai>SUSUNAN BAB 2</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>BAB 3</pattern>
+		<template>
+			BAB 3 Metodologi Penelitian((/br))
+
+1. Metode Pengumpulan Data((/br))
+
+     Kumpulan prosedur/teknik yang dilakukan peneliti untuk memperoleh data penelitian. mahasiswa harus menjabarkan data yang hendak didapatkan beserta teknik pengumpulan datanya. Sumber data bisa berasal dari dua, yaitu data primer atau sekunder.((/br))
+
+2. Alat Dan Bahan((/br))
+
+Berisi deskripsi dari alat dan berbagai bahan yang digunakan dalam penelitian khususnya pada tahap pengembangan perangkat lunak.((/br))
+
+3. Tahapan Penelitian((/br))
+
+Jelaskan secara rinci tahapan penelitian yang akan dilakukan beserta rencana luaran dari setiap tahapan.((br))((/br))
+
+Untuk format laporan dapat dilihat pada link berikut ((a href="https://tif.uad.ac.id/wp-content/uploads/Final-Buku-Panduan-Skripsi-Versi-2022.pdf"))Format Laporan((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* BAB 3 </pattern>
+		<template>
+			<srai>BAB 3</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> BAB 3 *</pattern>
+		<template>
+			<srai>BAB 3</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* BAB 3 *</pattern>
+		<template>
+			<srai>BAB 3</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>ISI BAB 3</pattern>
+		<template>
+			BAB 3 Metodologi Penelitian((/br))
+
+1. Metode Pengumpulan Data((/br))
+
+     Kumpulan prosedur/teknik yang dilakukan peneliti untuk memperoleh data penelitian. mahasiswa harus menjabarkan data yang hendak didapatkan beserta teknik pengumpulan datanya. Sumber data bisa berasal dari dua, yaitu data primer atau sekunder.((/br))
+
+2. Alat Dan Bahan((/br))
+
+Berisi deskripsi dari alat dan berbagai bahan yang digunakan dalam penelitian khususnya pada tahap pengembangan perangkat lunak.((/br))
+
+3. Tahapan Penelitian((/br))
+
+Jelaskan secara rinci tahapan penelitian yang akan dilakukan beserta rencana luaran dari setiap tahapan.((br))((/br))
+
+Untuk format laporan dapat dilihat pada link berikut ((a href="https://tif.uad.ac.id/wp-content/uploads/Final-Buku-Panduan-Skripsi-Versi-2022.pdf"))Format Laporan((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* ISI BAB 3 </pattern>
+		<template>
+			<srai>ISI BAB 3</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> ISI BAB 3 *</pattern>
+		<template>
+			<srai>ISI BAB 3</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* ISI BAB 3 *</pattern>
+		<template>
+			<srai>ISI BAB 3</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>SUSUNAN BAB 3</pattern>
+		<template>
+			BAB 3 Metodologi Penelitian((/br))
+
+1. Metode Pengumpulan Data((/br))
+
+     Kumpulan prosedur/teknik yang dilakukan peneliti untuk memperoleh data penelitian. mahasiswa harus menjabarkan data yang hendak didapatkan beserta teknik pengumpulan datanya. Sumber data bisa berasal dari dua, yaitu data primer atau sekunder.((/br))
+
+2. Alat Dan Bahan((/br))
+
+Berisi deskripsi dari alat dan berbagai bahan yang digunakan dalam penelitian khususnya pada tahap pengembangan perangkat lunak.((/br))
+
+3. Tahapan Penelitian((/br))
+
+Jelaskan secara rinci tahapan penelitian yang akan dilakukan beserta rencana luaran dari setiap tahapan.((br))((/br))
+
+Untuk format laporan dapat dilihat pada link berikut ((a href="https://tif.uad.ac.id/wp-content/uploads/Final-Buku-Panduan-Skripsi-Versi-2022.pdf"))Format Laporan((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SUSUNAN BAB 3 </pattern>
+		<template>
+			<srai>SUSUNAN BAB 3</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SUSUNAN BAB 3 *</pattern>
+		<template>
+			<srai>SUSUNAN BAB 3</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SUSUNAN BAB 3 *</pattern>
+		<template>
+			<srai>SUSUNAN BAB 3</srai>
+		</template>
+	</category>
+
+</aiml> 

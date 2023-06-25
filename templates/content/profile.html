@@ -1,0 +1,185 @@
+{% extends "layout/content.html" %} {% block title %} AIML | Profile {% endblock
+%} {% block profile %}
+<li class="user-header bg-primary">
+  <img
+    src="{{ url_for('static',filename='dist/img/user-icon.jpeg') }}"
+    class="img-circle elevation-2"
+    alt="User Image"
+  />
+  <p>{{getUsername}}</p>
+</li>
+<li class="user-footer">
+  <a href="/profile/{{id}}" class="btn btn-default btn-flat">Profile</a>
+  <a href="/logout" class="btn btn-default btn-flat float-right">Sign out</a>
+</li>
+{% endblock %} {% block user %} {{getUsername}} {% endblock %} {% block
+contentheader %}
+<div class="row">
+  <div class="col-md-3">
+    <!-- Profile Image -->
+    <div class="card card-primary card-outline">
+      <div class="card-body box-profile">
+        <div class="text-center">
+          <img
+            class="profile-user-img img-fluid img-circle"
+            src="{{ url_for('static',filename='dist/img/user-icon.jpeg') }}"
+            alt="User profile picture"
+          />
+        </div>
+
+        <h3 class="profile-username text-center">{{getUsername}}</h3>
+
+        <p class="text-muted text-center"></p>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+  <!-- /.col -->
+  <div class="col-md-9">
+    <div class="card">
+      <div class="card-header p-2">
+        <ul class="nav nav-pills">
+          <li class="nav-item"></li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#biodata" data-toggle="tab"
+              >Biodata</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#password" data-toggle="tab">Password</a>
+          </li>
+        </ul>
+      </div>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      <!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+      {% if messages %} {% for category, message in messages %}
+      <body onload="doMyAlerts('{{category}}', '{{message}}');"></body>
+      {% endfor %} {% endif %} {% endwith %}
+      <!-- /.card-header -->
+      <!-- /.card-body -->
+      <div class="card-body">
+        <div class="tab-content">
+          <div class="active tab-pane" id="biodata">
+            <form
+              class="form-horizontal"
+              action="/profile/edit/{{ id }}"
+              method="post"
+            >
+              {% for item in data %}
+              <div class="form-group row">
+                <label for="fullname" class="col-sm-2 col-form-label"
+                  >Fullname</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Fullname"
+                    value="{{ item[1] }}"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail" class="col-sm-2 col-form-label"
+                  >Email</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    value="{{ item[3] }}"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="username" class="col-sm-2 col-form-label"
+                  >Username</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    name="username"
+                    placeholder="Username"
+                    value="{{ item[2] }}"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" /> I agree to the
+                      <a href="#">terms and conditions</a>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                  <button type="submit" class="btn btn-danger">Submit</button>
+                </div>
+              </div>
+              {% endfor %}
+            </form>
+          </div>
+          <!-- /.tab-pane -->
+          <div class="tab-pane" id="password">
+            <!-- The password -->
+            <div class="password password-inverse">
+              <form
+                class="form-horizontal"
+                action="/profile/editpass/{{ id }}"
+                method="post"
+              >
+                {% for item in data %}
+                <div class="form-group row">
+                  <label for="password" class="col-sm-2 col-form-label"
+                    >Password</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      name="password"
+                      placeholder="password"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="offset-sm-2 col-sm-10">
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                  </div>
+                </div>
+                {% endfor %}
+              </form>
+            </div>
+          </div>
+          <!-- /.tab-pane -->
+
+          <!-- /.tab-pane -->
+        </div>
+        <!-- /.tab-content -->
+      </div>
+      <!-- /.card-body -->
+      <!-- adad -->
+    </div>
+    <!-- /.card -->
+  </div>
+  <!-- /.col -->
+</div>
+<!-- /.row -->
+{% endblock %}

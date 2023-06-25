@@ -1,0 +1,191 @@
+{% extends "layout/content.html" %} {% block title %} AIML | Tag {% endblock %}
+{% block profile %}
+<li class="user-header bg-primary">
+  <img
+    src="{{ url_for('static',filename='dist/img/user-icon.jpeg') }}"
+    class="img-circle elevation-2"
+    alt="User Image"
+  />
+  <p>{{getUsername}}</p>
+</li>
+<li class="user-footer">
+  <a href="/profile/{{id}}" class="btn btn-default btn-flat">Profile</a>
+  <a href="/logout" class="btn btn-default btn-flat float-right">Sign out</a>
+</li>
+{% endblock %} {% block user %} {{getUsername}} {% endblock %} {% block
+contentheader %}
+<div class="row mb-2">
+  <div class="col-sm-6">
+    <h1 class="m-0">Category</h1>
+  </div>
+  <div class="col-sm-6">
+    <ol class="breadcrumb float-sm-right">
+      <li class="breadcrumb-item active">
+        <a href="/home">Home</a>
+      </li>
+      <li class="breadcrumb-item active">
+        <a href="/tag">Tag</a>
+      </li>
+    </ol>
+  </div>
+</div>
+{% endblock %} {% block content %}
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title"><b>Data</b> (Category)</h3>
+        <div class="card-tools float-right">
+          <button
+            type="button"
+            class="btn btn-sm btn-success"
+            data-toggle="modal"
+            data-target="#insert-tag"
+          >
+            <i class="fas fa-plus mr-2"></i>
+            Add a Category
+          </button>
+        </div>
+      </div>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      <!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+      {% if messages %} {% for category, message in messages %}
+      <body onload="doMyAlerts('{{category}}', '{{message}}');"></body>
+      {% endfor %} {% endif %} {% endwith %}
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0" style="height: 400px">
+        <table class="table table-head-fixed table-striped text-nowrap">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in data %}
+            <tr>
+              <td>{{ item[1] }}</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-warning btn-sm"
+                  data-toggle="modal"
+                  data-target="#edit-tag-{{ item[0] }}"
+                >
+                  Edit
+                </button>
+                <a
+                  href="/tag/delete/{{ item[0] }}"
+                  class="btn btn-sm btn-danger"
+                  role="button"
+                  onclick="return confirm('Are you sure you want to delete?');"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+            <!-- modal-content -->
+            <div
+              class="modal fade"
+              id="edit-tag-{{item[0]}}"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="basicModal"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Edit a Category</h4>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <form action="/tag/edit/{{ item[0] }}" method="post">
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <label for="tagEdit" class="col-form-label"
+                          >Category :</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="tagEdit"
+                          name="tagEdit"
+                          required
+                          value="{{ item[1] }}"
+                        />
+                      </div>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                      <button
+                        type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="submit" class="btn btn-primary">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal-content -->
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+</div>
+<!-- modal-content -->
+<div class="modal fade" id="insert-tag">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Insert a Category</h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="/tag/add" method="post">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="tag" class="col-form-label">Category :</label>
+            <input
+              type="text"
+              class="form-control"
+              id="tag"
+              name="tag"
+              required
+            />
+          </div>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal-content -->
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "layout/content.html" %} {% block title %} AIML | Home {% endblock %}
+
+
+
+{% block profile %}
+<li class="user-header bg-primary">
+  <img
+    src="{{ url_for('static',filename='dist/img/user-icon.jpeg') }}"
+    class="img-circle elevation-2"
+    alt="User Image"
+  />
+  <p>{{getUsername}}</p>
+</li>
+<li class="user-footer">
+  <a href="/profile/{{id}}" class="btn btn-default btn-flat">Profile</a>
+  <a href="/logout" class="btn btn-default btn-flat float-right">Sign out</a>
+</li>
+{% endblock %} {% block user %} {{getUsername}} {% endblock %} {% block
+contentheader %}
+<div class="row mb-2">
+  <div class="col-sm-6">
+    <h1 class="m-0">Home</h1>
+  </div>
+  <div class="col-sm-6">
+    <ol class="breadcrumb float-sm-right">
+      <li class="breadcrumb-item active">
+        <a href="/">Home</a>
+      </li>
+    </ol>
+  </div>
+</div>
+{% endblock %} {% block content %}
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title"><b>Data</b> (Category, Pattern, Response)</h3>
+
+        <div class="card-tools">
+          <div class="input-group input-group-sm" style="width: 150px"></div>
+        </div>
+      </div>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      <!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+      {% if messages %} {% for category, message in messages %}
+      <body onload="doMyAlerts('{{category}}', '{{message}}');"></body>
+      {% endfor %} {% endif %} {% endwith %}
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0" style="overflow-y: auto;">
+        <div class="table-responsive" style="height: calc(100vh - 200px); max-height: none;">
+          <table class="table table-head-fixed table-striped text-nowrap">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Pattern</th>
+                <th>Response</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in data %}
+              <tr>
+                <!-- <td >{{ item[0] }}</td> -->
+                <td style="width: 150px">{{ item[0] }}</td>
+                <td style="white-space: normal; word-wrap: break-word; max-width: 150px;">{{ item[1] }}</td>
+                <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 150px;">{{ item[2] }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>  
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+</div>
+{% endblock %}
