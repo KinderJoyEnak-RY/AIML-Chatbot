@@ -5,7 +5,8 @@ from helper.spell_checker import correction
 from flask import Flask, render_template, url_for, redirect, request, session, flash
 import random
 from nltk.tokenize import word_tokenize
-# from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+import string
 
 app = Flask(__name__)
 app.secret_key = 'bptTaw74SPxYjzd'
@@ -98,6 +99,7 @@ def logout():
     return redirect(url_for('login'))
 
  #halaman utama
+
 @app.route("/")
 def home():
     #jika user berhasil login
@@ -432,40 +434,114 @@ def response_delete(id):
 
 DEFAULT_RESPONSES = ["Maaf, saya tidak dapat memahami pertanyaan Anda🙏 mohon sertakan konteks/informasi dasar pada pertanyaan anda🙏"]
 
+# membuat stemmer
+factory = StemmerFactory()
+stemmer = factory.create_stemmer()
+
+# Mendefinisikan path ke file kamus kata dasar
+kamus_path = 'helper/kata-dasar.txt'
+
+# Memuat kamus kata dasar dari file
+with open(kamus_path, 'r') as file:
+    kamus_kata_dasar = file.read().splitlines()
+
 @app.route("/get")
 def get_bot_response():
     query = request.args.get('msg')
     print('User Input: ', query)
 
-    # skip spell-checking for specific patterns
-    excluded_patterns = ['nama ', 'nama saya ', 'aku', 'saya']
-    if any(query.startswith(pattern) for pattern in excluded_patterns):
-        words = query.split()
-        correction_sentence = query
-    else:
-        # Case folding
-        query = query.lower()
-        query = re.sub(r'[^\w\s]', '', query)
-        print('After case folding: ', query)
-
-        # Tokenizing
-        words = word_tokenize(query)
-        print('After tokenizing: ', words)
-
-        # Spell correction
-        words = [correction(w) for w in words]
-        correction_sentence = " ".join(words)
-        print('After spell correction: ', correction_sentence)
-        print('Pattern : ', correction_sentence)
+    # Preprocessing
+    preprocessed_query = preprocess(query)
 
     # Call AIML kernel
-    response = kernel.respond(correction_sentence)
+    response = kernel.respond(preprocessed_query)
     x = response.replace("((", "<").replace("))", ">").replace("]", "").replace("'", "")
     print('Bot Response = ', x)
-    if x is None or x=='':
-        return(random.choice(DEFAULT_RESPONSES))
+    if x is None or x == '':
+        return random.choice(DEFAULT_RESPONSES)
     return x
+
+def preprocess(text):
+    # melakukan case folding
+    text = text.lower()
    
+    # menghilangkan nomor dan tanda baca
+    text = re.sub(r'\d+', '', text)
+    text = text.translate(str.maketrans('', '', string.punctuation))
+   
+    # melakukan tokenizing
+    words = text.split()
+   
+    # melakukan spell check
+    corrected_words = []
+    for word in words:
+        corrected_words.append(correction(word))
+
+    # melakukan stemming dengan kamus kata dasar
+    stemmed_words = []
+    for word in corrected_words:
+        if word in kamus_kata_dasar:
+            stemmed_words.append(word)
+        else:
+            stemmed_words.append(stemmer.stem(word))
+       
+    # melakukan filtering stopwords
+    with open('helper/data-stopword.txt', 'r') as file:
+        stopwords = file.read().splitlines()
+    filtered_words = [word for word in stemmed_words if word not in stopwords]
+   
+    print("Hasil case folding: ", text)
+    print("Hasil penghilangan nomor dan tanda baca: ", text)
+    print("Hasil tokenizing: ", words)
+    print("Hasil koreksi : ", corrected_words)
+    print("Hasil stemming: ", stemmed_words)
+    print("Hasil filtering stopwords: ", filtered_words)
+    
+    # menggabungkan kata yang telah dilakukan preprocessing
+    preprocessed_text = ' '.join(filtered_words)
+
+    print("Pattern :",preprocessed_text)
+    return preprocessed_text
+
 if __name__ == "__main__":
-    app.run(debug=True)   
+    app.run(debug=True)
+
+# DEFAULT_RESPONSES = ["Maaf, saya tidak dapat memahami pertanyaan Anda🙏 mohon sertakan konteks/informasi dasar pada pertanyaan anda🙏"]
+
+# @app.route("/get")
+# def get_bot_response():
+#     query = request.args.get('msg')
+#     print('User Input: ', query)
+
+#     # skip spell-checking for specific patterns
+#     excluded_patterns = ['nama ', 'nama saya ', 'aku', 'saya']
+#     if any(query.startswith(pattern) for pattern in excluded_patterns):
+#         words = query.split()
+#         correction_sentence = query
+#     else:
+#         # Case folding
+#         query = query.lower()
+#         query = re.sub(r'[^\w\s]', '', query)
+#         print('After case folding: ', query)
+
+#         # Tokenizing
+#         words = word_tokenize(query)
+#         print('After tokenizing: ', words)
+
+#         # Spell correction
+#         words = [correction(w) for w in words]
+#         correction_sentence = " ".join(words)
+#         print('After spell correction: ', correction_sentence)
+#         print('Pattern : ', correction_sentence)
+
+#     # Call AIML kernel
+#     response = kernel.respond(correction_sentence)
+#     x = response.replace("((", "<").replace("))", ">").replace("]", "").replace("'", "")
+#     print('Bot Response = ', x)
+#     if x is None or x=='':
+#         return(random.choice(DEFAULT_RESPONSES))
+#     return x
+   
+# if __name__ == "__main__":
+#     app.run(debug=True)   
 
