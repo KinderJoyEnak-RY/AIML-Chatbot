@@ -8,6 +8,8 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 from helper.spell_checker import correction
 from typing import Final
 from helper.update_aiml import update_aiml_file
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+import string
 
 
 def chat():
@@ -36,37 +38,71 @@ async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Pesan default jika tidak ada respons yang cocok
 DEFAULT_RESPONSES = ["Maaf, saya tidak dapat memahami pertanyaan Anda. Mohon sertakan konteks/informasi dasar pada pertanyaan Anda."]
 
+# membuat stemmer
+factory = StemmerFactory()
+stemmer = factory.create_stemmer()
+
+# Mendefinisikan path ke file kamus kata dasar
+kamus_path = 'helper/kata-dasar.txt'
+
+# Memuat kamus kata dasar dari file
+with open(kamus_path, 'r') as file:
+    kamus_kata_dasar = file.read().splitlines()
+
 # Fungsi untuk mendapatkan respons dari AIML kernel
 def get_bot_response(query: str) -> str:
-    # Mengecek pola yang dikecualikan dari pengecekan ejaan
-    excluded_patterns = ['nama ', 'nama saya ', 'aku', 'saya']
-    if any(query.startswith(pattern) for pattern in excluded_patterns):
-        words = query.split()
-        correction_sentence = query
-    else:
-        # Case folding
-        query = query.lower()
-        query = re.sub(r'[^\w\s]', '', query)
-        print('After case folding:', query)
+    # Preprocessing
+    preprocessed_query = preprocess(query)
 
-        # Tokenisasi
-        words = word_tokenize(query)
-        print('After tokenizing:', words)
-
-        # Koreksi ejaan
-        words = [correction(w) for w in words]
-        correction_sentence = " ".join(words)
-        print('After spell correction:', correction_sentence)
-        print('Pattern : ', correction_sentence)
-
-    # Panggil kernel AIML
-    response = kernel.respond(correction_sentence)
-    x = response.replace("((", "<").replace("))", ">")
-    x = x.replace("</br>", "\n")
-    print('Bot Response:', x)
-    if not x or x == '':
+    # Call AIML kernel
+    response = kernel.respond(preprocessed_query)
+    x = response.replace("((", "<").replace("))", ">").replace("]", "").replace("'", "")
+    print('Bot Response = ', x)
+    if x is None or x == '':
         return random.choice(DEFAULT_RESPONSES)
     return x
+
+def preprocess(text):
+    # melakukan case folding
+    text = text.lower()
+   
+    # menghilangkan nomor dan tanda baca
+    text = re.sub(r'\d+', '', text)
+    text = text.translate(str.maketrans('', '', string.punctuation))
+   
+    # melakukan tokenizing
+    words = text.split()
+   
+    # melakukan spell check
+    corrected_words = []
+    for word in words:
+        corrected_words.append(correction(word))
+
+    # melakukan stemming dengan kamus kata dasar
+    stemmed_words = []
+    for word in corrected_words:
+        if word in kamus_kata_dasar:
+            stemmed_words.append(word)
+        else:
+            stemmed_words.append(stemmer.stem(word))
+       
+    # melakukan filtering stopwords
+    with open('helper/data-stopword.txt', 'r') as file:
+        stopwords = file.read().splitlines()
+    filtered_words = [word for word in stemmed_words if word not in stopwords]
+   
+    print("Hasil case folding: ", text)
+    print("Hasil penghilangan nomor dan tanda baca: ", text)
+    print("Hasil tokenizing: ", words)
+    print("Hasil koreksi : ", corrected_words)
+    print("Hasil stemming: ", stemmed_words)
+    print("Hasil filtering stopwords: ", filtered_words)
+    
+    # menggabungkan kata yang telah dilakukan preprocessing
+    preprocessed_text = ' '.join(filtered_words)
+
+    print("Pattern :",preprocessed_text)
+    return preprocessed_text
 
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):

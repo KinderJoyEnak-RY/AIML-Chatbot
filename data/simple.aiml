@@ -1,47 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-	<category>
-			<pattern>NAMA *</pattern>
-			<template>
-					<think><set name="username"><star/></set></think>
-					hi <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
-			</template>
+	<category nocase="true">
+		<pattern>NAMA *</pattern>
+		<template>
+			<think>
+				<set name="username"><star/></set>
+			</think>
+			hai <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+		</template>
 	</category>
 
-	<category>
-		  <pattern>NAMA SAYA *</pattern>
-			<template>
-					<think><set name="username"><star/></set></think>
-					hi <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
-			</template>
+	<category nocase="true">
+		<pattern>NAMA SAYA *</pattern>
+		<template>
+			<think>
+				<set name="username"><star/></set>
+			</think>
+			hai <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+		</template>
 	</category>
 
-		<category>
-			<pattern>AKU *</pattern>
-			<template>
-					<think><set name="username"><star/></set></think>
-					hi <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
-			</template>
+	<category nocase="true">
+		<pattern>AKU *</pattern>
+		<template>
+			<think>
+				<set name="username"><star/></set>
+			</think>
+			hai <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+		</template>
 	</category>
 
-		<category>
-			<pattern>SAYA *</pattern>
-			<template>
-					<think><set name="username"><star/></set></think>
-					hi <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
-			</template>
+	<category nocase="true">
+		<pattern>SAYA *</pattern>
+		<template>
+			<think>
+				<set name="username"><star/></set>
+			</think>
+			hai <star/>, Senang berkenalan denganmu! Aku akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+		</template>
 	</category>
 
-	<category>
-			<pattern>* NAMA *</pattern>
-			<template>Nama kamu adalah <srai>GET NAME</srai>.</template>
+	<category nocase="true">
+		<pattern>NAMAKU *</pattern>
+		<template>
+			<think>
+				<set name="username"><star/></set>
+			</think>
+			hai <star/>, Senang berkenalan denganmu! Aku akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+		</template>
 	</category>
+
 	<category>
 			<pattern>GET NAME</pattern>
 			<template><get name="username"/></template>
 	</category>
+	 
+	<category nocase="true">
+		<pattern>NAMAMU _</pattern>
+		<template>Namaku MetBot. Siapa namamu?</template>
+	</category>
+	<category>
+		<pattern>SIAPA *</pattern>
+		<template>Namaku MetBot. Siapa namamu?</template>
+		<that></that>
+	</category>
 
-		<category> 
+	<category nocase="true">
+		<pattern>KAMU _</pattern>
+		<template>Namaku MetBot. Siapa namamu?</template>
+	</category>
+
+
+	<category> 
 		<pattern>ASSALAMUALAIKUM</pattern>
 		<template>
 			waalaikumsalam wr. wb, ada yang bisa di bantu?
@@ -96,10 +126,10 @@
         <template>
         <think> <set name="sapaan"><star/></set></think>
         
-        <condition name="sapaan" value = "pagi"> Halo <srai>GET NAME</srai>, Selamat Pagi ada yang bisa kami bantu ?</condition>
-        <condition name="sapaan" value = "siang"> Halo <srai>GET NAME</srai>, Selamat Siang ada yang bisa kami bantu ?</condition>
-        <condition name="sapaan" value = "sore"> Halo <srai>GET NAME</srai>, Selamat Sore ada yang bisa kami bantu ?</condition>
-        <condition name="sapaan" value = "malam"> Halo <srai>GET NAME</srai>, Selamat Malam ada yang bisa kami bantu ?</condition>
+        <condition name="sapaan" value = "pagi"> Selamat pagi <srai>GET NAME</srai>,  ada yang bisa saya bantu?</condition>
+        <condition name="sapaan" value = "siang"> Selamat siang <srai>GET NAME</srai>, ada yang bisa saya bantu?</condition>
+        <condition name="sapaan" value = "sore"> Selamat sore <srai>GET NAME</srai>, ada yang bisa saya bantu?</condition>
+        <condition name="sapaan" value = "malam"> Selamat malam <srai>GET NAME</srai>, ada yang bisa saya bantu?</condition>
         </template>
 	</category>
 
@@ -125,7 +155,11 @@
 	<category> 
 		<pattern>DAFTAR JUDUL</pattern>
 		<template>
-			Berikut tahapan pendaftaran judul atau topik metopen : ((/br))1. Mahasiswa menentukan topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal : Rekayasa Perangkat Lunak, Data Mining, Pengembangan Sistem Informasi, Sistem Cerdas, Keamanan Komputer, Jaringan Komputer dan lain-lain. Metopen yang menggunakan Judul dari Dosen, akan dibimbing oleh Dosen yang bersangkutan.((/br)) 2. Mahasiswa mengisi form pengkajian judul Metopen (FR-Metopen-01), yang dapat di download melalui ((a href="https://s.uad.id/form_metopentif" target="_blank"))Form Metopen TIF((/a)) dan dosen pembimbing akademik akan memastikan kelayakan topik metopen dan riwayat matakuliah yang pernah diambil untuk menunjang penelitian.((/br)) 3. Setelah mendapat persetujuan dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((/br)) 4. Setelah mendapat persetujuan calon dosen pembimbing akademik, mahasiswa mengisi form pengajuan dan upload berkas point no. 2 melalui ((a href="https://s.uad.id/pra_metopen" target="_blank"))Form Pengajuan dan Upload Berkas((/a))
+			Berikut tahapan pendaftaran judul atau topik metopen : ((br))((/br))
+1. Mahasiswa menentukan topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal : Rekayasa Perangkat Lunak, Data Mining, Pengembangan Sistem Informasi, Sistem Cerdas, Keamanan Komputer, Jaringan Komputer dan lain-lain. Metopen yang menggunakan Judul dari Dosen, akan dibimbing oleh Dosen yang bersangkutan.((br))((/br))
+2. Mahasiswa mengisi form pengkajian judul Metopen (FR-Metopen-01), yang dapat di download melalui ((a href="https://s.uad.id/form_metopentif" target="_blank"))Form Metopen TIF((/a)) dan dosen pembimbing akademik akan memastikan kelayakan topik metopen dan riwayat matakuliah yang pernah diambil untuk menunjang penelitian.((br))((/br))
+3. Setelah mendapat persetujuan dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((br))((/br))
+4. Setelah mendapat persetujuan calon dosen pembimbing akademik, mahasiswa mengisi form pengajuan dan upload berkas point no. 2 melalui  ((a href="https://s.uad.id/pra_metopen" target="_blank"))Form Pengajuan dan Upload Berkas((br))((/br))
 		</template>
 	</category>
 
@@ -153,7 +187,7 @@
 	<category> 
 		<pattern>DAFTAR TOPIK</pattern>
 		<template>
-			Berikut tahapan pendaftaran judul atau topik metopen : ((/br))1. Mahasiswa menentukan topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal : Rekayasa Perangkat Lunak, Data Mining, Pengembangan Sistem Informasi, Sistem Cerdas, Keamanan Komputer, Jaringan Komputer dan lain-lain. Metopen yang menggunakan Judul dari Dosen, akan dibimbing oleh Dosen yang bersangkutan.((/br)) 2. Mahasiswa mengisi form pengkajian judul Metopen (FR-Metopen-01), yang dapat di download melalui ((a href="https://s.uad.id/form_metopentif" target="_blank"))Form Metopen TIF((/a)) dan dosen pembimbing akademik akan memastikan kelayakan topik metopen dan riwayat matakuliah yang pernah diambil untuk menunjang penelitian.((/br)) 3. Setelah mendapat persetujuan dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((/br)) 4. Setelah mendapat persetujuan calon dosen pembimbing akademik, mahasiswa mengisi form pengajuan dan upload berkas point no. 2 melalui ((a href="https://s.uad.id/pra_metopen" target="_blank"))Form Pengajuan dan Upload Berkas((/a))
+			Berikut tahapan pendaftaran judul atau topik metopen : ((br))((/br))1. Mahasiswa menentukan topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal : Rekayasa Perangkat Lunak, Data Mining, Pengembangan Sistem Informasi, Sistem Cerdas, Keamanan Komputer, Jaringan Komputer dan lain-lain. Metopen yang menggunakan Judul dari Dosen, akan dibimbing oleh Dosen yang bersangkutan.((br))((/br)) 2. Mahasiswa mengisi form pengkajian judul Metopen (FR-Metopen-01), yang dapat di download melalui ((a href="https://s.uad.id/form_metopentif" target="_blank"))Form Metopen TIF((/a)) dan dosen pembimbing akademik akan memastikan kelayakan topik metopen dan riwayat matakuliah yang pernah diambil untuk menunjang penelitian.((br))((/br)) 3. Setelah mendapat persetujuan dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((br))((/br)) 4. Setelah mendapat persetujuan calon dosen pembimbing akademik, mahasiswa mengisi form pengajuan dan upload berkas point no. 2 melalui ((a href="https://s.uad.id/pra_metopen" target="_blank"))Form Pengajuan dan Upload Berkas((/a))
 		</template>
 	</category>
 
@@ -181,7 +215,7 @@
 	<category> 
 		<pattern>TOPIK PENELITIAN</pattern>
 		<template>
-			Berikut tahapan pendaftaran judul atau topik metopen : ((/br))1. Mahasiswa menentukan topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal : Rekayasa Perangkat Lunak, Data Mining, Pengembangan Sistem Informasi, Sistem Cerdas, Keamanan Komputer, Jaringan Komputer dan lain-lain. Metopen yang menggunakan Judul dari Dosen, akan dibimbing oleh Dosen yang bersangkutan.((/br)) 2. Mahasiswa mengisi form pengkajian judul Metopen (FR-Metopen-01), yang dapat di download melalui ((a href="https://s.uad.id/form_metopentif" target="_blank"))Form Metopen TIF((/a)) dan dosen pembimbing akademik akan memastikan kelayakan topik metopen dan riwayat matakuliah yang pernah diambil untuk menunjang penelitian.((/br)) 3. Setelah mendapat persetujuan dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((/br)) 4. Setelah mendapat persetujuan calon dosen pembimbing akademik, mahasiswa mengisi form pengajuan dan upload berkas point no. 2 melalui ((a href="https://s.uad.id/pra_metopen" target="_blank"))Form Pengajuan dan Upload Berkas((/a))
+			Mahasiswa menentukan judul atau topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal : Rekayasa Perangkat Lunak, Data Mining, Pengembangan Sistem Informasi, Sistem Cerdas, Keamanan Komputer, Jaringan Komputer dan lain-lain. Metopen yang menggunakan Judul dari Dosen, akan dibimbing oleh Dosen yang bersangkutan.
 		</template>
 	</category>
 
@@ -209,7 +243,7 @@
 	<category> 
 		<pattern>JUDUL PENELITIAN</pattern>
 		<template>
-			Berikut tahapan pendaftaran judul atau topik metopen : ((/br))1. Mahasiswa menentukan topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal : Rekayasa Perangkat Lunak, Data Mining, Pengembangan Sistem Informasi, Sistem Cerdas, Keamanan Komputer, Jaringan Komputer dan lain-lain. Metopen yang menggunakan Judul dari Dosen, akan dibimbing oleh Dosen yang bersangkutan.((/br)) 2. Mahasiswa mengisi form pengkajian judul Metopen (FR-Metopen-01), yang dapat di download melalui ((a href="https://s.uad.id/form_metopentif" target="_blank"))Form Metopen TIF((/a)) dan dosen pembimbing akademik akan memastikan kelayakan topik metopen dan riwayat matakuliah yang pernah diambil untuk menunjang penelitian.((/br)) 3. Setelah mendapat persetujuan dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((/br)) 4. Setelah mendapat persetujuan calon dosen pembimbing akademik, mahasiswa mengisi form pengajuan dan upload berkas point no. 2 melalui ((a href="https://s.uad.id/pra_metopen" target="_blank"))Form Pengajuan dan Upload Berkas((/a))
+			Mahasiswa menentukan judul atau topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal : Rekayasa Perangkat Lunak, Data Mining, Pengembangan Sistem Informasi, Sistem Cerdas, Keamanan Komputer, Jaringan Komputer dan lain-lain. Metopen yang menggunakan Judul dari Dosen, akan dibimbing oleh Dosen yang bersangkutan.
 		</template>
 	</category>
 
@@ -235,67 +269,123 @@
 	</category>
  
 	<category> 
-		<pattern>TAHAPAN PENDAFTARAN JUDUL</pattern>
+		<pattern>TAHAP DAFTAR JUDUL</pattern>
 		<template>
-			Berikut tahapan pendaftaran judul atau topik metopen : ((/br))
-1. KRS matkul metopen, Selanjutnya akan diperiksa prasyarat oleh Prodi. Jika tidak memenuhi syarat pengajuan Metopen, maka akan dihapus. tidak mengambil KP/MTP bersamaan dengan Metopen.((/br))
-2. Tentukan topik penelitian (judul sendiri/dari Dosen). Misal : RPL, Data Mining, Sistem Informasi, SC, KK, Jaringan Komputer, dll. Jika judul dari Dosen, maka dibimbing oleh Dosen yang bersangkutan.((/br))
-3. Mencari min 3 pustaka pendukung (Jurnal Nasional/Internasional atau Seminar Nasional/Internasional).((/br))
-4. Mahasiswa dapat mengidentifikasi penulis, judul, volume, nomor dan tahun terbit jurnal. begitupun dengan naskah yang dimuat di Seminar.((/br))
-5. Melakukan review naskah publikasi pendukung penelitian tersebut dan konsultasikan dengan dosen pembimbing akademik/dosen wali.((/br))
-6. Mengisi form pengkajian judul metopen (FR-Metopen-01), dapat di download melalui ((a href="https://s.uad.id/form_metopentif" target="_blank"))Form Metopen TIF((/a)) dan dospem akademik akan memastikan kelayakan topik metopen.((/br))
-7. setelah mendapat ACC dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((/br))
-8. Setelah mendapat ACC calon dospem, mahasiswa mengisi form pengajuan dan upload berkas point no. 6 melalui ((a href="https://s.uad.id/pra_metopen" target="_blank"))Form Pengajuan dan Upload Berkas((/a))((/br))
+			Berikut tahapan pendaftaran judul atau topik metopen : ((br))((/br))
+1. KRS matkul metopen, Selanjutnya akan diperiksa prasyarat oleh Prodi. Jika tidak memenuhi syarat pengajuan Metopen, maka akan dihapus. tidak mengambil KP/MTP bersamaan dengan Metopen.((br))((/br))
+2. Tentukan topik penelitian (judul sendiri/dari Dosen). Misal : RPL, Data Mining, Sistem Informasi, SC, KK, Jaringan Komputer, dll. Jika judul dari Dosen, maka dibimbing oleh Dosen yang bersangkutan.((br))((/br))
+3. Mencari min 3 pustaka pendukung (Jurnal Nasional/Internasional atau Seminar Nasional/Internasional).((br))((/br))
+4. Mahasiswa dapat mengidentifikasi penulis, judul, volume, nomor dan tahun terbit jurnal. begitupun dengan naskah yang dimuat di Seminar.((br))((/br))
+5. Melakukan review naskah publikasi pendukung penelitian tersebut dan konsultasikan dengan dosen pembimbing akademik/dosen wali.((br))((/br))
+6. Mengisi form pengkajian judul metopen (FR-Metopen-01), dapat di download melalui ((a href="https://s.uad.id/form_metopentif" target="_blank"))Form Metopen TIF((/a)) dan dospem akademik akan memastikan kelayakan topik metopen.((br))((/br))
+7. setelah mendapat ACC dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((br))((/br))
+8. Setelah mendapat ACC calon dospem, mahasiswa mengisi form pengajuan dan upload berkas point no. 6 melalui ((a href="https://s.uad.id/pra_metopen" target="_blank"))Form Pengajuan dan Upload Berkas((/a))((br))((/br))
 9. Mahasiswa memilih kelas sesuai dengan pembagian topik skripsi perkelas.
 		</template>
 	</category>
 
 	<category>
-		<pattern>* TAHAPAN PENDAFTARAN JUDUL </pattern>
+		<pattern>* TAHAP DAFTAR JUDUL </pattern>
 		<template>
-			<srai>TAHAPAN PENDAFTARAN JUDUL</srai>
+			<srai>TAHAP DAFTAR JUDUL</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> TAHAPAN PENDAFTARAN JUDUL *</pattern>
+		<pattern> TAHAP DAFTAR JUDUL *</pattern>
 		<template>
-			<srai>TAHAPAN PENDAFTARAN JUDUL</srai>
+			<srai>TAHAP DAFTAR JUDUL</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* TAHAPAN PENDAFTARAN JUDUL *</pattern>
+		<pattern>* TAHAP DAFTAR JUDUL *</pattern>
 		<template>
-			<srai>TAHAPAN PENDAFTARAN JUDUL</srai>
+			<srai>TAHAP DAFTAR JUDUL</srai>
 		</template>
 	</category>
  
 	<category> 
-		<pattern>TAHAPAN PENDAFTARAN TOPIK</pattern>
+		<pattern>TAHAP DAFTAR TOPIK</pattern>
 		<template>
-			Berikut tahapan pendaftaran judul atau topik metopen : ((/br)) 1. KRS matkul metopen, Selanjutnya akan diperiksa prasyarat oleh Prodi. Jika tidak memenuhi syarat pengajuan Metopen, maka akan dihapus. tidak mengambil KP/MTP bersamaan dengan Metopen.((/br)) 2. Tentukan topik penelitian (judul sendiri/dari Dosen). Misal : RPL, Data Mining, Sistem Informasi, SC, KK, Jaringan Komputer, dll. Jika judul dari Dosen, maka dibimbing oleh Dosen yang bersangkutan.((/br)) 3. Mencari min 3 pustaka pendukung (Jurnal Nasional/Internasional atau Seminar Nasional/Internasional).((/br)) 4. Mahasiswa dapat mengidentifikasi penulis, judul, volume, nomor dan tahun terbit jurnal. begitupun dengan naskah yang dimuat di Seminar.((/br)) 5. Melakukan review naskah publikasi pendukung penelitian tersebut dan konsultasikan dengan dosen pembimbing akademik/dosen wali.((/br)) 6. Mengisi form pengkajian judul metopen (FR-Metopen-01), dapat di download melalui ((a href="https://s.uad.id/form_metopentif"))Form Metopen TIF((/a)) dan dospem akademik akan memastikan kelayakan topik metopen.((/br)) 7. setelah mendapat ACC dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((/br)) 8. Setelah mendapat ACC calon dospem, mahasiswa mengisi form pengajuan dan upload berkas point no. 6 melalui ((a href="https://s.uad.id/pra_metopen"))Form Pengajuan dan Upload Berkas((/a))((/br)) 9. Mahasiswa memilih kelas sesuai dengan pembagian topik skripsi perkelas.
+			Berikut tahapan pendaftaran judul atau topik metopen : ((br))((/br)) 1. KRS matkul metopen, Selanjutnya akan diperiksa prasyarat oleh Prodi. Jika tidak memenuhi syarat pengajuan Metopen, maka akan dihapus. tidak mengambil KP/MTP bersamaan dengan Metopen.((br))((/br)) 2. Tentukan topik penelitian (judul sendiri/dari Dosen). Misal : RPL, Data Mining, Sistem Informasi, SC, KK, Jaringan Komputer, dll. Jika judul dari Dosen, maka dibimbing oleh Dosen yang bersangkutan.((/br)) 3. Mencari min 3 pustaka pendukung (Jurnal Nasional/Internasional atau Seminar Nasional/Internasional).((br))((/br)) 4. Mahasiswa dapat mengidentifikasi penulis, judul, volume, nomor dan tahun terbit jurnal. begitupun dengan naskah yang dimuat di Seminar.((br))((/br))5. Melakukan review naskah publikasi pendukung penelitian tersebut dan konsultasikan dengan dosen pembimbing akademik/dosen wali.((br))((/br)) 6. Mengisi form pengkajian judul metopen (FR-Metopen-01), dapat di download melalui ((a href="https://s.uad.id/form_metopentif"))Form Metopen TIF((/a)) dan dospem akademik akan memastikan kelayakan topik metopen.((br))((/br)) 7. setelah mendapat ACC dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((br))((/br)) 8. Setelah mendapat ACC calon dospem, mahasiswa mengisi form pengajuan dan upload berkas point no. 6 melalui ((a href="https://s.uad.id/pra_metopen"))Form Pengajuan dan Upload Berkas((/a))((br))((/br)) 9. Mahasiswa memilih kelas sesuai dengan pembagian topik skripsi perkelas.
 		</template>
 	</category>
 
 	<category>
-		<pattern>* TAHAPAN PENDAFTARAN TOPIK </pattern>
+		<pattern>* TAHAP DAFTAR TOPIK </pattern>
 		<template>
-			<srai>TAHAPAN PENDAFTARAN TOPIK</srai>
+			<srai>TAHAP DAFTAR TOPIK</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> TAHAPAN PENDAFTARAN TOPIK *</pattern>
+		<pattern> TAHAP DAFTAR TOPIK *</pattern>
 		<template>
-			<srai>TAHAPAN PENDAFTARAN TOPIK</srai>
+			<srai>TAHAP DAFTAR TOPIK</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* TAHAPAN PENDAFTARAN TOPIK *</pattern>
+		<pattern>* TAHAP DAFTAR TOPIK *</pattern>
 		<template>
-			<srai>TAHAPAN PENDAFTARAN TOPIK</srai>
+			<srai>TAHAP DAFTAR TOPIK</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>JUDUL PENELITIAN</pattern>
+		<template>
+			Berikut tahapan pendaftaran judul atau topik metopen : ((/br)) 1. KRS matkul metopen, Selanjutnya akan diperiksa prasyarat oleh Prodi. Jika tidak memenuhi syarat pengajuan Metopen, maka akan dihapus. tidak mengambil KP/MTP bersamaan dengan Metopen.((/br)) 2. Tentukan topik penelitian (judul sendiri/dari Dosen). Misal : RPL, Data Mining, Sistem Informasi, SC, KK, Jaringan Komputer, dll. Jika judul dari Dosen, maka dibimbing oleh Dosen yang bersangkutan.((/br)) 3. Mencari min 3 pustaka pendukung (Jurnal Nasional/Internasional atau Seminar Nasional/Internasional).((/br)) 4. Mahasiswa dapat mengidentifikasi penulis, judul, volume, nomor dan tahun terbit jurnal. begitupun dengan naskah yang dimuat di Seminar.((/br)) 5. Melakukan review naskah publikasi pendukung penelitian tersebut dan konsultasikan dengan dosen pembimbing akademik/dosen wali.((/br)) 6. Mengisi form pengkajian judul metopen (FR-Metopen-01), dapat di download melalui ((a href="https://s.uad.id/form_metopentif" target="_blank"))Form Metopen TIF((/a)) dan dospem akademik akan memastikan kelayakan topik metopen.((/br)) 7. setelah mendapat ACC dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((/br)) 8. Setelah mendapat ACC calon dospem, mahasiswa mengisi form pengajuan dan upload berkas point no. 6 melalui ((a href="https://s.uad.id/pra_metopen" target="_blank"))Form Pengajuan dan Upload Berkas((/a))((/br)) 9. Mahasiswa memilih kelas sesuai dengan pembagian topik skripsi perkelas.
+		</template>
+	</category>
+
+	<category>
+		<pattern>* JUDUL PENELITIAN </pattern>
+		<template>
+			<srai>JUDUL PENELITIAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> JUDUL PENELITIAN *</pattern>
+		<template>
+			<srai>JUDUL PENELITIAN</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* JUDUL PENELITIAN *</pattern>
+		<template>
+			<srai>JUDUL PENELITIAN</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>FORM KAJI</pattern>
+		<template>
+			Mahasiswa mengisi form pengkajian judul metopen (FR-Metopen-01) yang dapat di download melalui Form ((a href="https://s.uad.id/form_metopentif" target="_blank"))Form Metopen TIF((/a)) dan dosen pembimbing akademik akan memastikan kelayakan topik dan riwayat matakuliah yang pernah diambil untuk menunjang penelitian.
+		</template>
+	</category>
+
+	<category>
+		<pattern>* FORM KAJI </pattern>
+		<template>
+			<srai>FORM KAJI</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> FORM KAJI *</pattern>
+		<template>
+			<srai>FORM KAJI</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* FORM KAJI *</pattern>
+		<template>
+			<srai>FORM KAJI</srai>
 		</template>
 	</category>
  
@@ -334,8 +424,7 @@ Pelaksanaan Metodologi Penelitian((/br))
 	<category> 
 		<pattern>PELAKSANAAN METOPEN</pattern>
 		<template>
-			Metodologi penelitian adalah serangkaian langkah atau prosedur yang diikuti oleh seorang peneliti untuk merancang, melaksanakan, dan menganalisis penelitian. Metodologi penelitian membantu peneliti dalam merumuskan pertanyaan penelitian yang jelas, merencanakan desain penelitian yang tepat, mengumpulkan data yang relevan, menganalisis data, dan mengambil kesimpulan yang akurat.((br))((/br))
-Pelaksanaan Metodologi Penelitian((/br))
+			Pelaksanaan Metodologi Penelitian((/br))
 1. perkuliahan metopen dilksanakan di semester 6. Mahasiswa harus memastikan tidak mengambil matakuliah KP/MTP bersamaan dengan matakuliah Metopen((/br))
 2. Hasil kuliah Metopen adalah Proposal Skripsi (Skripsi ditempuh pada semester berikutnya). Metopen memiliki 2 kegiatan utama yaitu perkuliahan dikelas (sesuai kelas) dan bimbingan dengan dospem metopen. Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan). Pastikan sudah melakukan aktivitas Pra-Metopen.((/br))
 3. UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satunya, akan dianggap gagal kuliah metopen pada semester itu. Berbeda dengan UAS kuliah lainnya. UAS metopen adalah Seminar Proposal.
@@ -459,7 +548,7 @@ Pelaksanaan Metodologi Penelitian((/br))
 	<category> 
 		<pattern>KELAS METOPEN</pattern>
 		<template>
-			- Perkuliahan metopen dilksanakan di semester 6. Mahasiswa harus memastikan tidak mengambil matakuliah KP/MTP bersamaan dengan matakuliah Metopen((/br)
+			- Perkuliahan metopen dilksanakan di semester 6. Mahasiswa harus memastikan tidak mengambil matakuliah KP/MTP bersamaan dengan matakuliah Metopen((/br))
 - Kelas Metopen dibagi menjadi 2 yaitu kelas Relata dan kelas Sistem Cerdas. Mahasiswa diharapkan memilih kelas sesuai dengan bidang minat dan dospem masing masing.
 		</template>
 	</category>
@@ -488,7 +577,8 @@ Pelaksanaan Metodologi Penelitian((/br))
 	<category> 
 		<pattern>PERKULIAHAN METOPEN</pattern>
 		<template>
-			- Perkuliahan metopen dilksanakan di semester 6. Mahasiswa harus memastikan tidak mengambil matakuliah KP/MTP bersamaan dengan matakuliah Metopen((/br)
+			- Perkuliahan metopen dilksanakan di semester 6. Mahasiswa harus memastikan tidak mengambil matakuliah KP/MTP bersamaan dengan matakuliah Metopen((/br))
+
 - Metopen memiliki 2 kegiatan utama yaitu perkuliahan dikelas (sesuai kelas) dan bimbingan dengan dosen pembimbing metopen. Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan).
 		</template>
 	</category>
@@ -575,7 +665,7 @@ UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satun
 	<category> 
 		<pattern>LOGBOOK</pattern>
 		<template>
-			Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan). berikut ((a href="https://tif.uad.ac.id/wp-content/uploads/LOG-BOOK-Metodologi-Penelitian.doc" target="_blank"))Logbook Metopen((/a))
+			Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan). berikut template ((a href="https://tif.uad.ac.id/wp-content/uploads/LOG-BOOK-Metodologi-Penelitian.doc" target="_blank"))Logbook Metopen((/a))
 		</template>
 	</category>
 
@@ -597,6 +687,34 @@ UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satun
 		<pattern>* LOGBOOK *</pattern>
 		<template>
 			<srai>LOGBOOK</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>SEMESTER</pattern>
+		<template>
+			- Perkuliahan metopen dilksanakan di semester 6. Mahasiswa harus memastikan tidak mengambil matakuliah KP/MTP bersamaan dengan matakuliah Metopen((/br) - Metopen memiliki 2 kegiatan utama yaitu perkuliahan dikelas (sesuai kelas) dan bimbingan dengan dosen pembimbing metopen. Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan).
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SEMESTER </pattern>
+		<template>
+			<srai>SEMESTER</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SEMESTER *</pattern>
+		<template>
+			<srai>SEMESTER</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SEMESTER *</pattern>
+		<template>
+			<srai>SEMESTER</srai>
 		</template>
 	</category>
  
@@ -2552,58 +2670,60 @@ Bidang sistem cerdas terus berkembang, dan ada banyak subbidang dan aplikasi yan
 	</category>
  
 	<category> 
-		<pattern>LIHAT HASIL SELEKSI</pattern>
+		<pattern>HALO</pattern>
 		<template>
-			ini hasilnya
+			Hai! Selamat datang di metopen bot.
+Disini kamu bisa bertanya Seputar Metodologi Penelitian :)
 		</template>
 	</category>
 
 	<category>
-		<pattern>* LIHAT HASIL SELEKSI </pattern>
+		<pattern>* HALO </pattern>
 		<template>
-			<srai>LIHAT HASIL SELEKSI</srai>
+			<srai>HALO</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> LIHAT HASIL SELEKSI *</pattern>
+		<pattern> HALO *</pattern>
 		<template>
-			<srai>LIHAT HASIL SELEKSI</srai>
+			<srai>HALO</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* LIHAT HASIL SELEKSI *</pattern>
+		<pattern>* HALO *</pattern>
 		<template>
-			<srai>LIHAT HASIL SELEKSI</srai>
+			<srai>HALO</srai>
 		</template>
 	</category>
  
 	<category> 
-		<pattern>BIAYA DAFTAR</pattern>
+		<pattern>HAI</pattern>
 		<template>
-			fwf
+			Hallo! Selamat datang di metopen bot.
+Disini kamu bisa bertanya Seputar Metodologi Penelitian :)
 		</template>
 	</category>
 
 	<category>
-		<pattern>* BIAYA DAFTAR </pattern>
+		<pattern>* HAI </pattern>
 		<template>
-			<srai>BIAYA DAFTAR</srai>
+			<srai>HAI</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> BIAYA DAFTAR *</pattern>
+		<pattern> HAI *</pattern>
 		<template>
-			<srai>BIAYA DAFTAR</srai>
+			<srai>HAI</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* BIAYA DAFTAR *</pattern>
+		<pattern>* HAI *</pattern>
 		<template>
-			<srai>BIAYA DAFTAR</srai>
+			<srai>HAI</srai>
 		</template>
 	</category>
 

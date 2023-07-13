@@ -52,48 +52,78 @@ def update_aiml_file():
 	f = open("data/simple.aiml", "w")
 	#fungsi menulis pada file yang telah dibuat
 	f.write("""<?xml version="1.0" encoding="UTF-8"?>\n<aiml version="2.0">
-	<category>
-			<pattern>NAMA *</pattern>
-			<template>
-					<think><set name="username"><star/></set></think>
-					hi <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
-			</template>
+	<category nocase="true">
+		<pattern>NAMA *</pattern>
+		<template>
+			<think>
+				<set name="username"><star/></set>
+			</think>
+			hai <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+		</template>
 	</category>
 
-	<category>
-		  <pattern>NAMA SAYA *</pattern>
-			<template>
-					<think><set name="username"><star/></set></think>
-					hi <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
-			</template>
+	<category nocase="true">
+		<pattern>NAMA SAYA *</pattern>
+		<template>
+			<think>
+				<set name="username"><star/></set>
+			</think>
+			hai <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+		</template>
 	</category>
 
-		<category>
-			<pattern>AKU *</pattern>
-			<template>
-					<think><set name="username"><star/></set></think>
-					hi <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
-			</template>
+	<category nocase="true">
+		<pattern>AKU *</pattern>
+		<template>
+			<think>
+				<set name="username"><star/></set>
+			</think>
+			hai <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+		</template>
 	</category>
 
-		<category>
-			<pattern>SAYA *</pattern>
-			<template>
-					<think><set name="username"><star/></set></think>
-					hi <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
-			</template>
+	<category nocase="true">
+		<pattern>SAYA *</pattern>
+		<template>
+			<think>
+				<set name="username"><star/></set>
+			</think>
+			hai <star/>, Senang berkenalan denganmu! Aku akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+		</template>
 	</category>
 
-	<category>
-			<pattern>* NAMA *</pattern>
-			<template>Nama kamu adalah <srai>GET NAME</srai>.</template>
+	<category nocase="true">
+		<pattern>NAMAKU *</pattern>
+		<template>
+			<think>
+				<set name="username"><star/></set>
+			</think>
+			hai <star/>, Senang berkenalan denganmu! Aku akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+		</template>
 	</category>
+
 	<category>
 			<pattern>GET NAME</pattern>
 			<template><get name="username"/></template>
 	</category>
+	 
+	<category nocase="true">
+		<pattern>NAMAMU _</pattern>
+		<template>Namaku MetBot. Siapa namamu?</template>
+	</category>
+	<category>
+		<pattern>SIAPA *</pattern>
+		<template>Namaku MetBot. Siapa namamu?</template>
+		<that></that>
+	</category>
 
-		<category> 
+	<category nocase="true">
+		<pattern>KAMU _</pattern>
+		<template>Namaku MetBot. Siapa namamu?</template>
+	</category>
+
+
+	<category> 
 		<pattern>ASSALAMUALAIKUM</pattern>
 		<template>
 			waalaikumsalam wr. wb, ada yang bisa di bantu?
@@ -148,10 +178,10 @@ def update_aiml_file():
         <template>
         <think> <set name="sapaan"><star/></set></think>
         
-        <condition name="sapaan" value = "pagi"> Halo <srai>GET NAME</srai>, Selamat Pagi ada yang bisa kami bantu ?</condition>
-        <condition name="sapaan" value = "siang"> Halo <srai>GET NAME</srai>, Selamat Siang ada yang bisa kami bantu ?</condition>
-        <condition name="sapaan" value = "sore"> Halo <srai>GET NAME</srai>, Selamat Sore ada yang bisa kami bantu ?</condition>
-        <condition name="sapaan" value = "malam"> Halo <srai>GET NAME</srai>, Selamat Malam ada yang bisa kami bantu ?</condition>
+        <condition name="sapaan" value = "pagi"> Selamat pagi <srai>GET NAME</srai>,  ada yang bisa saya bantu?</condition>
+        <condition name="sapaan" value = "siang"> Selamat siang <srai>GET NAME</srai>, ada yang bisa saya bantu?</condition>
+        <condition name="sapaan" value = "sore"> Selamat sore <srai>GET NAME</srai>, ada yang bisa saya bantu?</condition>
+        <condition name="sapaan" value = "malam"> Selamat malam <srai>GET NAME</srai>, ada yang bisa saya bantu?</condition>
         </template>
 	</category>
 

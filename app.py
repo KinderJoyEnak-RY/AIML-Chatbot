@@ -1,12 +1,12 @@
 import re
 import aiml
 from helper.update_aiml import connect, update_aiml_file, custom_make_translation
-from helper.spell_checker import correction
 from flask import Flask, render_template, url_for, redirect, request, session, flash
-import random
+from helper.spell_checker import correction
 from nltk.tokenize import word_tokenize
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 import string
+import random
 
 app = Flask(__name__)
 app.secret_key = 'bptTaw74SPxYjzd'
@@ -433,6 +433,7 @@ def response_delete(id):
 
 
 DEFAULT_RESPONSES = ["Maaf, saya tidak dapat memahami pertanyaan Anda🙏 mohon sertakan konteks/informasi dasar pada pertanyaan anda🙏"]
+excluded_patterns = ['nama ', 'nama saya ', 'aku ', 'saya ', 'namamu', 'siapa', 'kamu', 'namaku']
 
 # membuat stemmer
 factory = StemmerFactory()
@@ -450,11 +451,17 @@ def get_bot_response():
     query = request.args.get('msg')
     print('User Input: ', query)
 
-    # Preprocessing
-    preprocessed_query = preprocess(query)
+    # Memeriksa apakah input pengguna cocok dengan pola yang harus dikecualikan
+    should_exclude = any(query.lower().startswith(pattern) for pattern in excluded_patterns)
+    if should_exclude:
+        response = kernel.respond(query)
+    else:
+        # Preprocessing
+        preprocessed_query = preprocess(query)
 
-    # Call AIML kernel
-    response = kernel.respond(preprocessed_query)
+        # Call AIML kernel
+        response = kernel.respond(preprocessed_query)
+
     x = response.replace("((", "<").replace("))", ">").replace("]", "").replace("'", "")
     print('Bot Response = ', x)
     if x is None or x == '':
@@ -482,7 +489,7 @@ def preprocess(text):
     for word in corrected_words:
         if word in kamus_kata_dasar:
             stemmed_words.append(word)
-        else:
+        else: 
             stemmed_words.append(stemmer.stem(word))
        
     # melakukan filtering stopwords
@@ -505,6 +512,8 @@ def preprocess(text):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
 
 # DEFAULT_RESPONSES = ["Maaf, saya tidak dapat memahami pertanyaan Anda🙏 mohon sertakan konteks/informasi dasar pada pertanyaan anda🙏"]
 

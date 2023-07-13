@@ -765,7 +765,7 @@ uad
 iya
 ya
 nama
-
-
+helo
+pengkajian
 
 #http://hikaruyuuki.lecture.ub.ac.id/kamus-kata-dasar-dan-stopword-list-bahasa-indonesia/

@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-	<category>
-		<pattern>NAMA SAYA *</pattern>
-		<template>
-			<think><set name="username"><star/></set></think>
-			hi <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
-		</template>
-	</category>
-	<category>
+		<category>
 			<pattern>NAMA *</pattern>
 			<template>
 					<think><set name="username"><star/></set></think>
-					hi <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+					hai <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
 			</template>
 	</category>
+
+	<category>
+		  <pattern>NAMA SAYA *</pattern>
+			<template>
+					<think><set name="username"><star/></set></think>
+					hai <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+			</template>
+	</category>
+
+		<category>
+			<pattern>AKU *</pattern>
+			<template>
+					<think><set name="username"><star/></set></think>
+					hai <star/>, Senang berkenalan denganmu! Saya akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+			</template>
+	</category>
+
+		<category>
+			<pattern>SAYA *</pattern>
+			<template>
+					<think><set name="username"><star/></set></think>
+					hai <star/>, Senang berkenalan denganmu! Aku akan mengingat nama kamu. baik <srai>GET NAME</srai>, ada yang bisa saya bantu?
+			</template>
+	</category>
+
 	<category>
 			<pattern>* NAMA *</pattern>
 			<template>Nama kamu adalah <srai>GET NAME</srai>.</template>
@@ -24,17 +42,24 @@
 	</category>
 
   <category>
-	<pattern>BYE</pattern>
-  <template>
-      okay, <get name="username"/> Terima kasih atas percakapannya!
-  </template>  
-</category>
-<category>
-  <pattern>TERIMA KASIH</pattern>
-  <template>
-      okay, <get name="username"/> Terima kasih atas percakapannya!
-  </template>  
-</category>
+		<pattern>BYE</pattern>
+		<template>
+      okay, <srai>GET NAME</srai> Terima kasih atas percakapannya!
+  	</template>  
+	</category>
+	<category>
+		<pattern>TERIMAKASIH</pattern>
+		<template>
+				okay, <srai>GET NAME</srai> Terima kasih atas percakapannya!
+		</template>  
+	</category>
+	<category>
+		<pattern>TERIMA KASIH</pattern>
+		<template>
+				okay, <srai>GET NAME</srai> Terima kasih atas percakapannya!
+		</template>  
+	</category>
+	
 	 
 	<category> 
 		<pattern>ASSALAMUALAIKUM</pattern>

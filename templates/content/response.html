@@ -52,6 +52,13 @@ contentheader %}
         .btn-action {
           display: inline-block;
           margin-right: 5px;
+        } 
+        /* batasi lebar data respons */
+        .response-data {
+          max-width: 805px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
       </style>
       {% with messages = get_flashed_messages(with_categories=true) %}
@@ -59,6 +66,7 @@ contentheader %}
         {% if messages %} {% for category, message in messages %}
         <body onload="doMyAlerts('{{category}}', '{{message}}');"></body>
         {% endfor %} {% endif %} {% endwith %}
+
         <!-- /.card-header -->
         <div class="card-body table-responsive p-0" style="height: 600px; overflow-y: auto;">
           <table class="table table-striped">
@@ -71,7 +79,14 @@ contentheader %}
             <tbody>
               {% for item in data %}
               <tr>
-                <td>{{ item[3] }}</td>
+                <td class="response-data" title="{{ item[3] }}">{{ item[3] }}</td>
+                <td>
+                  {% for patternItem in dataPattern %}
+                    {% if patternItem[0] == item[2] %}
+                      <p>Pattern: {{ patternItem[2] }}</p>
+                    {% endif %}
+                  {% endfor %}
+                </td>
                 <td>
                   <div class="btn-group">
                     <button type="button" class="btn btn-warning btn-sm btn-action" data-toggle="modal" data-target="#edit-response-{{ item[0] }}">

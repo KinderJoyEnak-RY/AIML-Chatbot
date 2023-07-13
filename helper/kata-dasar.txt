@@ -20563,7 +20563,6 @@ pendok
 pendongkok
 pendopo
 pendua
-penduk
 pendulum
 penembahan
 penes
@@ -29931,3 +29930,7 @@ zurafah
 zuriah
 zus
 penelitian
+pendukung
+
+
+https://github.com/sastrawi/sastrawi/tree/master
