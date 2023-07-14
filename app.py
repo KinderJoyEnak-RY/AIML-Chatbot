@@ -252,7 +252,17 @@ def tag_delete(id):
 def pattern():
     if 'loggedin' in session:
         mycursor = conn.cursor()
-        mycursor.execute(''' SELECT id, pattern, tag_id FROM pattern''')
+        search_pattern = request.args.get('search')
+        if search_pattern:
+            search_query = '%' + search_pattern + '%'
+            mycursor.execute('''SELECT pattern.id, pattern.pattern, pattern.tag_id, tag.tag
+                                FROM pattern
+                                INNER JOIN tag ON pattern.tag_id = tag.id
+                                WHERE pattern.pattern LIKE %s''', (search_query,))
+        else:
+            mycursor.execute('''SELECT pattern.id, pattern.pattern, pattern.tag_id, tag.tag
+                                FROM pattern
+                                INNER JOIN tag ON pattern.tag_id = tag.id''')
         data = mycursor.fetchall()
 
         mycursor.execute(''' SELECT id, tag FROM tag''')
@@ -356,21 +366,29 @@ def pattern_delete(id):
 def response():
     if 'loggedin' in session:
         mycursor = conn.cursor()
-        mycursor.execute(''' SELECT id, tag_id, pattern_id, response FROM response''')
+
+        # Mendapatkan nilai pencarian dari parameter URL
+        search = request.args.get('search', '')
+
+        # Menggunakan parameter pencarian dalam query SELECT
+        query = '''SELECT id, tag_id, pattern_id, response FROM response 
+                   WHERE response LIKE %s'''
+        params = ('%' + search + '%',)
+        mycursor.execute(query, params)
         data = mycursor.fetchall()
 
-        mycursor.execute(''' SELECT id, tag FROM tag ''')
+        mycursor.execute('''SELECT id, tag FROM tag''')
         dataTag = mycursor.fetchall()
 
-        mycursor.execute(''' SELECT id, tag_id, pattern FROM pattern''')
+        mycursor.execute('''SELECT id, tag_id, pattern FROM pattern''')
         dataPattern = mycursor.fetchall()
 
         mycursor.close()
 
         getUsername = session['username']
         id = session['id']
-        return render_template('content/response.html', data=data, id=id, dataTag=dataTag,  dataPattern=dataPattern, getUsername = session['username'])
-    # User is not loggedin redirect to login page
+        return render_template('content/response.html', data=data, id=id, dataTag=dataTag, dataPattern=dataPattern, getUsername=session['username'])
+    # Pengguna tidak terdaftar, redirect ke halaman login
     return redirect(url_for('login'))
 
  #fungsi untuk menambahkan data response

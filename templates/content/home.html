@@ -51,6 +51,7 @@ contentheader %}
           <table class="table table-head-fixed table-striped text-nowrap">
             <thead>
               <tr>
+                <th>No.</th>
                 <th>Category</th>
                 <th>Pattern</th>
                 <th>Response</th>
@@ -59,6 +60,7 @@ contentheader %}
             <tbody>
               {% for item in data %}
               <tr>
+                <td>{{ loop.index }}</td>
                 <!-- <td >{{ item[0] }}</td> -->
                 <td style="width: 150px">{{ item[0] }}</td>
                 <td style="white-space: normal; word-wrap: break-word; max-width: 150px;">{{ item[1] }}</td>

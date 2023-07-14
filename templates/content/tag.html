@@ -57,6 +57,7 @@ contentheader %}
         <table class="table table-head-fixed table-striped text-nowrap">
           <thead>
             <tr>
+              <th>No.</th>
               <th>Category</th>
               <th>Action</th>
             </tr>
@@ -64,6 +65,7 @@ contentheader %}
           <tbody>
             {% for item in data %}
             <tr>
+              <td>{{ loop.index }}</td>
               <td>{{ item[1] }}</td>
               <td>
                 <button

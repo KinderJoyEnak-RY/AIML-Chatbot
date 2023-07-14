@@ -29931,6 +29931,10 @@ zuriah
 zus
 penelitian
 pendukung
+pelaksanaan
+Pengajuan
+toefl
+similarity
 
 
 https://github.com/sastrawi/sastrawi/tree/master

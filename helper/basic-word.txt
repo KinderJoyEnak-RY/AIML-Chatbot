@@ -29926,5 +29926,6 @@ literasi
 similarity
 template
 rumusan
+toefl
 
 #http://hikaruyuuki.lecture.ub.ac.id/kamus-kata-dasar-dan-stopword-list-bahasa-indonesia/

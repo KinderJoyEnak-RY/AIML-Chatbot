@@ -767,5 +767,9 @@ ya
 nama
 helo
 pengkajian
+pengajuan
+aja
+sih
+
 
 #http://hikaruyuuki.lecture.ub.ac.id/kamus-kata-dasar-dan-stopword-list-bahasa-indonesia/

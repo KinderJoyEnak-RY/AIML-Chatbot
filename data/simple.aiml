@@ -334,6 +334,34 @@
 	</category>
  
 	<category> 
+		<pattern>TOEFL</pattern>
+		<template>
+			Jika mahasiswa belum memiliki sertifikat TOEFL, maka dapat melakukan tes TOEFL terlebih dahulu. Informasi lengkap mengenai pendaftaran TOEFL dapat dilihat pada website ((a href = "https://adlc.uad.ac.id/adept-online/" target="_blank"))ADLC((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* TOEFL </pattern>
+		<template>
+			<srai>TOEFL</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> TOEFL *</pattern>
+		<template>
+			<srai>TOEFL</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* TOEFL *</pattern>
+		<template>
+			<srai>TOEFL</srai>
+		</template>
+	</category>
+ 
+	<category> 
 		<pattern>JUDUL PENELITIAN</pattern>
 		<template>
 			Berikut tahapan pendaftaran judul atau topik metopen : ((/br)) 1. KRS matkul metopen, Selanjutnya akan diperiksa prasyarat oleh Prodi. Jika tidak memenuhi syarat pengajuan Metopen, maka akan dihapus. tidak mengambil KP/MTP bersamaan dengan Metopen.((/br)) 2. Tentukan topik penelitian (judul sendiri/dari Dosen). Misal : RPL, Data Mining, Sistem Informasi, SC, KK, Jaringan Komputer, dll. Jika judul dari Dosen, maka dibimbing oleh Dosen yang bersangkutan.((/br)) 3. Mencari min 3 pustaka pendukung (Jurnal Nasional/Internasional atau Seminar Nasional/Internasional).((/br)) 4. Mahasiswa dapat mengidentifikasi penulis, judul, volume, nomor dan tahun terbit jurnal. begitupun dengan naskah yang dimuat di Seminar.((/br)) 5. Melakukan review naskah publikasi pendukung penelitian tersebut dan konsultasikan dengan dosen pembimbing akademik/dosen wali.((/br)) 6. Mengisi form pengkajian judul metopen (FR-Metopen-01), dapat di download melalui ((a href="https://s.uad.id/form_metopentif" target="_blank"))Form Metopen TIF((/a)) dan dospem akademik akan memastikan kelayakan topik metopen.((/br)) 7. setelah mendapat ACC dari dospem akademik, mahasiswa dapat menghubungi calon dospem metopen untuk berkonsultasi terkait topik penelitian. Jika mahasiswa tidak menghubungi calon dospem, artinya mahasiswa bersedia dengan dospem yang dipilihkan melalui rapat Kelompok Keilmuan.((/br)) 8. Setelah mendapat ACC calon dospem, mahasiswa mengisi form pengajuan dan upload berkas point no. 6 melalui ((a href="https://s.uad.id/pra_metopen" target="_blank"))Form Pengajuan dan Upload Berkas((/a))((/br)) 9. Mahasiswa memilih kelas sesuai dengan pembagian topik skripsi perkelas.
@@ -392,10 +420,9 @@
 	<category> 
 		<pattern>PELAKSANAAN METODOLOGI PENELITIAN</pattern>
 		<template>
-			Metodologi penelitian adalah serangkaian langkah atau prosedur yang diikuti oleh seorang peneliti untuk merancang, melaksanakan, dan menganalisis penelitian. Metodologi penelitian membantu peneliti dalam merumuskan pertanyaan penelitian yang jelas, merencanakan desain penelitian yang tepat, mengumpulkan data yang relevan, menganalisis data, dan mengambil kesimpulan yang akurat.((br))((/br))
-Pelaksanaan Metodologi Penelitian((/br))
-1. perkuliahan metopen dilksanakan di semester 6. Mahasiswa harus memastikan tidak mengambil matakuliah KP/MTP bersamaan dengan matakuliah Metopen((/br))
-2. Hasil kuliah Metopen adalah Proposal Skripsi (Skripsi ditempuh pada semester berikutnya). Metopen memiliki 2 kegiatan utama yaitu perkuliahan dikelas (sesuai kelas) dan bimbingan dengan dospem metopen. Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan). Pastikan sudah melakukan aktivitas Pra-Metopen.((/br))
+			Pelaksanaan Metodologi Penelitian((br))
+1. perkuliahan metopen dilksanakan di semester 6. Mahasiswa harus memastikan tidak mengambil matakuliah KP/MTP bersamaan dengan matakuliah Metopen((br))((/br))
+2. Hasil kuliah Metopen adalah Proposal Skripsi (Skripsi ditempuh pada semester berikutnya). Metopen memiliki 2 kegiatan utama yaitu perkuliahan dikelas (sesuai kelas) dan bimbingan dengan dospem metopen. Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan). Pastikan sudah melakukan aktivitas Pra-Metopen.((br))((/br))
 3. UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satunya, akan dianggap gagal kuliah metopen pada semester itu. Berbeda dengan UAS kuliah lainnya. UAS metopen adalah Seminar Proposal.
 		</template>
 	</category>
@@ -424,9 +451,9 @@ Pelaksanaan Metodologi Penelitian((/br))
 	<category> 
 		<pattern>PELAKSANAAN METOPEN</pattern>
 		<template>
-			Pelaksanaan Metodologi Penelitian((/br))
-1. perkuliahan metopen dilksanakan di semester 6. Mahasiswa harus memastikan tidak mengambil matakuliah KP/MTP bersamaan dengan matakuliah Metopen((/br))
-2. Hasil kuliah Metopen adalah Proposal Skripsi (Skripsi ditempuh pada semester berikutnya). Metopen memiliki 2 kegiatan utama yaitu perkuliahan dikelas (sesuai kelas) dan bimbingan dengan dospem metopen. Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan). Pastikan sudah melakukan aktivitas Pra-Metopen.((/br))
+			Pelaksanaan Metodologi Penelitian((br))
+1. perkuliahan metopen dilksanakan di semester 6. Mahasiswa harus memastikan tidak mengambil matakuliah KP/MTP bersamaan dengan matakuliah Metopen((br))((/br))
+2. Hasil kuliah Metopen adalah Proposal Skripsi (Skripsi ditempuh pada semester berikutnya). Metopen memiliki 2 kegiatan utama yaitu perkuliahan dikelas (sesuai kelas) dan bimbingan dengan dospem metopen. Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan). Pastikan sudah melakukan aktivitas Pra-Metopen.((br))((/br))
 3. UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satunya, akan dianggap gagal kuliah metopen pada semester itu. Berbeda dengan UAS kuliah lainnya. UAS metopen adalah Seminar Proposal.
 		</template>
 	</category>
@@ -575,39 +602,9 @@ Pelaksanaan Metodologi Penelitian((/br))
 	</category>
  
 	<category> 
-		<pattern>PERKULIAHAN METOPEN</pattern>
-		<template>
-			- Perkuliahan metopen dilksanakan di semester 6. Mahasiswa harus memastikan tidak mengambil matakuliah KP/MTP bersamaan dengan matakuliah Metopen((/br))
-
-- Metopen memiliki 2 kegiatan utama yaitu perkuliahan dikelas (sesuai kelas) dan bimbingan dengan dosen pembimbing metopen. Semua aktivitas bimbingan harus dicatat dalam logbook metopen (paling tidak mingguan).
-		</template>
-	</category>
-
-	<category>
-		<pattern>* PERKULIAHAN METOPEN </pattern>
-		<template>
-			<srai>PERKULIAHAN METOPEN</srai>
-		</template>
-	</category>
-
-	<category>
-		<pattern> PERKULIAHAN METOPEN *</pattern>
-		<template>
-			<srai>PERKULIAHAN METOPEN</srai>
-		</template>
-	</category>
-
-	<category>
-		<pattern>* PERKULIAHAN METOPEN *</pattern>
-		<template>
-			<srai>PERKULIAHAN METOPEN</srai>
-		</template>
-	</category>
- 
-	<category> 
 		<pattern>UTS</pattern>
 		<template>
-			Ujian Tengah Semester (UTS) metopen yaitu mengumpulkan bab 1. Dikumpulkan di E-Learning mahasiswa atau tergantung dari dosen kelas masing-masing.((/br))
+			Ujian Tengah Semester (UTS) metopen yaitu mengumpulkan bab 1. Dikumpulkan di E-Learning mahasiswa atau kebijakan dari dosen kelas masing-masing.((br))((/br))
 UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satunya, akan dianggap gagal kuliah metopen pada semester itu.
 		</template>
 	</category>
@@ -636,7 +633,7 @@ UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satun
 	<category> 
 		<pattern>UAS</pattern>
 		<template>
-			Ujian Akhir Semester (UAS) metopen adalah Seminar Proposal. dilaksanakan setelah perkuliahan metopen selesai di semester itu((/br))
+			Ujian Akhir Semester (UAS) metopen adalah Seminar Proposal. dilaksanakan setelah perkuliahan metopen selesai di semester itu.((br))((/br))
 UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satunya, akan dianggap gagal kuliah metopen pada semester itu.
 		</template>
 	</category>
@@ -719,7 +716,7 @@ UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satun
 	</category>
  
 	<category> 
-		<pattern>PENGAJUAN SEMINAR PROPOSAL</pattern>
+		<pattern>AJU SEMINAR PROPOSAL</pattern>
 		<template>
 			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : 
 ((a href = "https://s.uad.id/reg_semprop_tif" target="_blank"))Pendaftaran Seminar Proposal((/a))((br))((/br))
@@ -736,28 +733,28 @@ Persyaratannya:((/br))
 	</category>
 
 	<category>
-		<pattern>* PENGAJUAN SEMINAR PROPOSAL </pattern>
+		<pattern>* AJU SEMINAR PROPOSAL </pattern>
 		<template>
-			<srai>PENGAJUAN SEMINAR PROPOSAL</srai>
+			<srai>AJU SEMINAR PROPOSAL</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> PENGAJUAN SEMINAR PROPOSAL *</pattern>
+		<pattern> AJU SEMINAR PROPOSAL *</pattern>
 		<template>
-			<srai>PENGAJUAN SEMINAR PROPOSAL</srai>
+			<srai>AJU SEMINAR PROPOSAL</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* PENGAJUAN SEMINAR PROPOSAL *</pattern>
+		<pattern>* AJU SEMINAR PROPOSAL *</pattern>
 		<template>
-			<srai>PENGAJUAN SEMINAR PROPOSAL</srai>
+			<srai>AJU SEMINAR PROPOSAL</srai>
 		</template>
 	</category>
  
 	<category> 
-		<pattern>PENGAJUAN SEMPRO</pattern>
+		<pattern>AJU SEMPRO</pattern>
 		<template>
 			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : 
 ((a href = "https://s.uad.id/reg_semprop_tif" target="_blank"))Pendaftaran Seminar Proposal((/a))((br))((/br))
@@ -774,32 +771,30 @@ Persyaratannya:((/br))
 	</category>
 
 	<category>
-		<pattern>* PENGAJUAN SEMPRO </pattern>
+		<pattern>* AJU SEMPRO </pattern>
 		<template>
-			<srai>PENGAJUAN SEMPRO</srai>
+			<srai>AJU SEMPRO</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> PENGAJUAN SEMPRO *</pattern>
+		<pattern> AJU SEMPRO *</pattern>
 		<template>
-			<srai>PENGAJUAN SEMPRO</srai>
+			<srai>AJU SEMPRO</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* PENGAJUAN SEMPRO *</pattern>
+		<pattern>* AJU SEMPRO *</pattern>
 		<template>
-			<srai>PENGAJUAN SEMPRO</srai>
+			<srai>AJU SEMPRO</srai>
 		</template>
 	</category>
  
 	<category> 
-		<pattern>PERSYARATAN</pattern>
+		<pattern>SYARAT</pattern>
 		<template>
-			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : 
-((a href = "https://s.uad.id/reg_semprop_tif" target="_blank"))Pendaftaran Seminar Proposal((/a))((br))((/br))
-Persyaratannya:((/br))
+			Persyaratan Seminar Proposal:((/br))
 1. Naskah Proposal (acc Pembimbing)((/br))
 2. Logbook bimbingan minimal 10x((/br))
 3. Transkrip Nilai((/br))
@@ -812,33 +807,32 @@ Persyaratannya:((/br))
 	</category>
 
 	<category>
-		<pattern>* PERSYARATAN </pattern>
+		<pattern>* SYARAT </pattern>
 		<template>
-			<srai>PERSYARATAN</srai>
+			<srai>SYARAT</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> PERSYARATAN *</pattern>
+		<pattern> SYARAT *</pattern>
 		<template>
-			<srai>PERSYARATAN</srai>
+			<srai>SYARAT</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* PERSYARATAN *</pattern>
+		<pattern>* SYARAT *</pattern>
 		<template>
-			<srai>PERSYARATAN</srai>
+			<srai>SYARAT</srai>
 		</template>
 	</category>
  
 	<category> 
 		<pattern>JADWAL SEMINAR PROPOSAL</pattern>
 		<template>
-			SEMINAR PROPOSAL :((/br))
-- Mahasiswa membayar sempro ke bank dengan jenis pembayaran SEMINAR PROPOSAL sebesar Rp. 75.000. Jika mengulang maka bayar dengan jenis pembayaran LAIN-LAIN sebesar Rp. 75.000.((/br))
-- Setelah mahasiswa mendaftar melalui form pendaftaran maka mahasiswa akan mendapatkan notifikasi email berupa jadwal seminar proposal beserta daftar pengujinya. Selanjutnya naskah dan berita acara seminar proposal akan diinfokan bersamaan dengan jadwal yang telah diagendakan melalui link dalam Google Calendar.((br))((/br))
-Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : 
+			Jadwal Seminar Proposal:((/br))
+Setelah mahasiswa mendaftar melalui form pendaftaran maka mahasiswa akan mendapatkan notifikasi email berupa jadwal seminar proposal beserta daftar pengujinya. Selanjutnya naskah dan berita acara seminar proposal akan diinfokan bersamaan dengan jadwal yang telah diagendakan melalui link dalam Google Calendar.((br))((/br))
+Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui link berikut: 
 ((a href = "https://s.uad.id/reg_semprop_tif" target="_blank"))Pendaftaran Seminar Proposal((/a))
 		</template>
 	</category>
@@ -867,10 +861,9 @@ Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik
 	<category> 
 		<pattern>JADWAL SEMPRO</pattern>
 		<template>
-			SEMINAR PROPOSAL :((/br))
-- Mahasiswa membayar sempro ke bank dengan jenis pembayaran SEMINAR PROPOSAL sebesar Rp. 75.000. Jika mengulang maka bayar dengan jenis pembayaran LAIN-LAIN sebesar Rp. 75.000.((/br))
-- Setelah mahasiswa mendaftar melalui form pendaftaran maka mahasiswa akan mendapatkan notifikasi email berupa jadwal seminar proposal beserta daftar pengujinya. Selanjutnya naskah dan berita acara seminar proposal akan diinfokan bersamaan dengan jadwal yang telah diagendakan melalui link dalam Google Calendar.((br))((/br))
-Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : 
+			Jadwal Seminar Proposal:((/br))
+Setelah mahasiswa mendaftar melalui form pendaftaran maka mahasiswa akan mendapatkan notifikasi email berupa jadwal seminar proposal beserta daftar pengujinya. Selanjutnya naskah dan berita acara seminar proposal akan diinfokan bersamaan dengan jadwal yang telah diagendakan melalui link dalam Google Calendar.((br))((/br))
+Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui link berikut: 
 ((a href = "https://s.uad.id/reg_semprop_tif" target="_blank"))Pendaftaran Seminar Proposal((/a))
 		</template>
 	</category>
@@ -926,35 +919,6 @@ Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik
 	</category>
  
 	<category> 
-		<pattern>FORM PENDAFARAN SEMPRO</pattern>
-		<template>
-			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : 
-((a href = "https://s.uad.id/reg_semprop_tif" target="_blank"))Pendaftaran Seminar Proposal((/a))
-		</template>
-	</category>
-
-	<category>
-		<pattern>* FORM PENDAFARAN SEMPRO </pattern>
-		<template>
-			<srai>FORM PENDAFARAN SEMPRO</srai>
-		</template>
-	</category>
-
-	<category>
-		<pattern> FORM PENDAFARAN SEMPRO *</pattern>
-		<template>
-			<srai>FORM PENDAFARAN SEMPRO</srai>
-		</template>
-	</category>
-
-	<category>
-		<pattern>* FORM PENDAFARAN SEMPRO *</pattern>
-		<template>
-			<srai>FORM PENDAFARAN SEMPRO</srai>
-		</template>
-	</category>
- 
-	<category> 
 		<pattern>FORM DAFTAR SEMINAR PROPOSAL</pattern>
 		<template>
 			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : 
@@ -980,35 +944,6 @@ Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik
 		<pattern>* FORM DAFTAR SEMINAR PROPOSAL *</pattern>
 		<template>
 			<srai>FORM DAFTAR SEMINAR PROPOSAL</srai>
-		</template>
-	</category>
- 
-	<category> 
-		<pattern>FORM PENDAFTARAN SEMINAR PROPOSAL</pattern>
-		<template>
-			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : 
-((a href = "https://s.uad.id/reg_semprop_tif" target="_blank"))Pendaftaran Seminar Proposal((/a))
-		</template>
-	</category>
-
-	<category>
-		<pattern>* FORM PENDAFTARAN SEMINAR PROPOSAL </pattern>
-		<template>
-			<srai>FORM PENDAFTARAN SEMINAR PROPOSAL</srai>
-		</template>
-	</category>
-
-	<category>
-		<pattern> FORM PENDAFTARAN SEMINAR PROPOSAL *</pattern>
-		<template>
-			<srai>FORM PENDAFTARAN SEMINAR PROPOSAL</srai>
-		</template>
-	</category>
-
-	<category>
-		<pattern>* FORM PENDAFTARAN SEMINAR PROPOSAL *</pattern>
-		<template>
-			<srai>FORM PENDAFTARAN SEMINAR PROPOSAL</srai>
 		</template>
 	</category>
  
@@ -1067,64 +1002,6 @@ Setelah mahasiswa mendaftar melalui form pendaftaran maka mahasiswa akan mendapa
 		<pattern>* DAFTAR SEMINAR PROPOSAL *</pattern>
 		<template>
 			<srai>DAFTAR SEMINAR PROPOSAL</srai>
-		</template>
-	</category>
- 
-	<category> 
-		<pattern>PENDAFTARAN SEMPRO</pattern>
-		<template>
-			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : ((a href = "https://s.uad.id/reg_semprop_tif" target="_blank"))Pendaftaran Seminar Proposal((/a))((/br))
-Setelah mahasiswa mendaftar melalui form pendaftaran maka mahasiswa akan mendapatkan notifikasi email berupa jadwal seminar proposal beserta daftar pengujinya. Selanjutnya naskah dan berita acara seminar proposal akan diinfokan bersamaan dengan jadwal yang telah diagendakan melalui link dalam Google Calendar.
-		</template>
-	</category>
-
-	<category>
-		<pattern>* PENDAFTARAN SEMPRO </pattern>
-		<template>
-			<srai>PENDAFTARAN SEMPRO</srai>
-		</template>
-	</category>
-
-	<category>
-		<pattern> PENDAFTARAN SEMPRO *</pattern>
-		<template>
-			<srai>PENDAFTARAN SEMPRO</srai>
-		</template>
-	</category>
-
-	<category>
-		<pattern>* PENDAFTARAN SEMPRO *</pattern>
-		<template>
-			<srai>PENDAFTARAN SEMPRO</srai>
-		</template>
-	</category>
- 
-	<category> 
-		<pattern>PENDAFTARAN SEMINAR PROPOSAL</pattern>
-		<template>
-			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : ((a href = "https://s.uad.id/reg_semprop_tif" target="_blank"))Pendaftaran Seminar Proposal((/a))((/br))
-Setelah mahasiswa mendaftar melalui form pendaftaran maka mahasiswa akan mendapatkan notifikasi email berupa jadwal seminar proposal beserta daftar pengujinya. Selanjutnya naskah dan berita acara seminar proposal akan diinfokan bersamaan dengan jadwal yang telah diagendakan melalui link dalam Google Calendar.
-		</template>
-	</category>
-
-	<category>
-		<pattern>* PENDAFTARAN SEMINAR PROPOSAL </pattern>
-		<template>
-			<srai>PENDAFTARAN SEMINAR PROPOSAL</srai>
-		</template>
-	</category>
-
-	<category>
-		<pattern> PENDAFTARAN SEMINAR PROPOSAL *</pattern>
-		<template>
-			<srai>PENDAFTARAN SEMINAR PROPOSAL</srai>
-		</template>
-	</category>
-
-	<category>
-		<pattern>* PENDAFTARAN SEMINAR PROPOSAL *</pattern>
-		<template>
-			<srai>PENDAFTARAN SEMINAR PROPOSAL</srai>
 		</template>
 	</category>
  
@@ -1226,6 +1103,35 @@ Pada bulan November 2022, Perpustakaan UAD akan mengadakan pelatihan literasi in
 	</category>
  
 	<category> 
+		<pattern>SIMILARITY</pattern>
+		<template>
+			Meningkatnya jumlah mahasiswa UAD berpengaruh terhadap banyaknya jumlah publikasi yang di lingkup UAD sehingga perpustakaan memberikan layanan cek plagiarisme. Layanan cek plagiarisme bagi civitas akademik UAD ini diberikan secara GRATIS sedangkan untuk non civitas akademika UAD dikenai biaya administrasi Rp 50.000,-/naskah.((br))((/br))
+Mekanisme cek kesamaan kata untuk sivitas akademika UAD dapat dilihat pada link berikut: ((a href="https://perpustakaan.uad.ac.id/layanan-cek-kesamaan-kata/" target="_blank"))Layanan Cek Kesamaan Kata((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SIMILARITY </pattern>
+		<template>
+			<srai>SIMILARITY</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SIMILARITY *</pattern>
+		<template>
+			<srai>SIMILARITY</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* SIMILARITY *</pattern>
+		<template>
+			<srai>SIMILARITY</srai>
+		</template>
+	</category>
+ 
+	<category> 
 		<pattern>LITERASI</pattern>
 		<template>
 			Sejak pandemi kegiatan pelatihan literasi informasi berubah menjadi online yang dilaksanakan satu bulan satu kali melalui aplikasi zoom dan juga melalui live streaming Youtube Perpustakaan UAD. Materi kegiatan meliputi pemanfaatan aplikasi mendeley, penelusuran database online dan optimasi ms word dan plagiarisme. Link pendaftaran sebagai berikut:((/br)) - ((a href="https://docs.google.com/forms/d/e/1FAIpQLSc3sBMn1YZqb6fpxOE08V7rISUuD1_p53Xcb3a8m_ONQ1fbtA/viewform?usp=sf_link" target="_blank"))Pemanfaatan Aplikasi Mendeley((/a))((/br)) - ((a href="https://docs.google.com/forms/d/e/1FAIpQLSdKwnFb2lcz4QyCSfVn9_VJq-YVlrZop5SKy7Cf4wVqpgWJTQ/viewform?usp=sf_link" target="_blank"))Penelusuran Database Online((/a))((/br)) - ((a href="https://docs.google.com/forms/d/e/1FAIpQLScu6R1MnAG8qGwaSsjvKO5xtWyp0NVj4pRCRqfI-lygxGNQ9A/viewform?usp=sf_link" target="_blank"))Optimasi Ms Word dan Cek Kesamaan Kata((/a))((br))((/br)) Pada bulan November 2022, Perpustakaan UAD akan mengadakan pelatihan literasi informasi dengan materi baru yakni penulisan artikel ilmiah, berikut link pendaftarannya:((/br)) - ((a href="https://docs.google.com/forms/d/e/1FAIpQLSftHlsj5lHXGanM_PN7JxAkJb2e7nYj6VL4zBtzVxYT-7eGOg/viewform?usp=sf_link" target="_blank"))Penulisan Artikel Ilmiah((/a))
@@ -1310,30 +1216,31 @@ Pada bulan November 2022, Perpustakaan UAD akan mengadakan pelatihan literasi in
 	</category>
  
 	<category> 
-		<pattern>PEMBAYARAN</pattern>
+		<pattern>PLAGIARISME</pattern>
 		<template>
-			Mahasiswa membayar seminar proposal ke bank dengan jenis pembayaran SEMINAR PROPOSAL sebesar Rp. 75.000. Jika mengulang maka bayar dengan jenis pembayaran LAIN-LAIN sebesar Rp. 75.000
+			Meningkatnya jumlah mahasiswa UAD berpengaruh terhadap banyaknya jumlah publikasi yang di lingkup UAD sehingga perpustakaan memberikan layanan cek plagiarisme. Layanan cek plagiarisme bagi civitas akademik UAD ini diberikan secara GRATIS sedangkan untuk non civitas akademika UAD dikenai biaya administrasi Rp 50.000,-/naskah.((br))((/br))
+Mekanisme cek kesamaan kata untuk sivitas akademika UAD dapat dilihat pada link berikut: ((a href="https://perpustakaan.uad.ac.id/layanan-cek-kesamaan-kata/" target="_blank"))Layanan Cek Kesamaan Kata((/a))
 		</template>
 	</category>
 
 	<category>
-		<pattern>* PEMBAYARAN </pattern>
+		<pattern>* PLAGIARISME </pattern>
 		<template>
-			<srai>PEMBAYARAN</srai>
+			<srai>PLAGIARISME</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> PEMBAYARAN *</pattern>
+		<pattern> PLAGIARISME *</pattern>
 		<template>
-			<srai>PEMBAYARAN</srai>
+			<srai>PLAGIARISME</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* PEMBAYARAN *</pattern>
+		<pattern>* PLAGIARISME *</pattern>
 		<template>
-			<srai>PEMBAYARAN</srai>
+			<srai>PLAGIARISME</srai>
 		</template>
 	</category>
  
