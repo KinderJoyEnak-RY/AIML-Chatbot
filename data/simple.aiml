@@ -1513,10 +1513,10 @@ Email : supriyanto@tif.uad.ac.id
 		<pattern>LAPORAN</pattern>
 		<template>
 			ATURAN UMUM((/br))
-1. Naskah laporan Metopen merupakan karya ilmiah yang disusun menurut kaidah keilmuan dan ditulis berdasarkan kaidah Bahasa Indonesia (EYD) di bawah pengawasan/pengarahan dospem.((/br))
-2. Metopen dapat diujikan di depan tim penguji apabila sudah mendapatkan persetujuan dari dospem dan memenuhi syarat pengajuan Sempro.((/br))
-3. Isi Laporan terdiri dari cover, pra bab, bab I sampai bab III(romawi).((/br))
-4. Pra bab berisi : halaman judul, daftar isi, daftar tabel, daftar gambar, daftar script, Abstrak.((/br))
+1. Naskah laporan Metopen merupakan karya ilmiah yang disusun menurut kaidah keilmuan dan ditulis berdasarkan kaidah Bahasa Indonesia (EYD) di bawah pengawasan/pengarahan dospem.((br))((/br))
+2. Metopen dapat diujikan di depan tim penguji apabila sudah mendapatkan persetujuan dari dospem dan memenuhi syarat pengajuan Sempro.((br))((/br))
+3. Isi Laporan terdiri dari cover, pra bab, bab I sampai bab III (romawi).((br))((/br))
+4. Pra bab berisi : halaman judul, daftar isi, daftar tabel, daftar gambar, daftar script, Abstrak.((br))((/br))
 5. Daftar pustaka harus dicantumkan setelah bab III dengan format penulisan sesuai dengan aturan yg tercantum pada subbab dalam bab ini.((br))((/br))
 Mahasiswa wajib membuat laporan metopen dan skripsi sesuai dengan format yang telah ditentukan, buku panduan dapat dilihat pada link berikut:((/br))((a href="https://tif.uad.ac.id/wp-content/uploads/Buku-Panduan-Skripsi-v.2.pdf" target="_blank"))1. Format Laporan((/a))((/br)) ((a href="https://tif.uad.ac.id/wp-content/uploads/Template-Laporan-Skripsi-2022-v.2-1.docx" target="_blank"))2. Template laporan Skripsi ((/a))
 		</template>
@@ -1607,7 +1607,7 @@ Persoalan utama dalam melakukan penelitian adalah mengungkap atau mengidentifika
 	</category>
  
 	<category> 
-		<pattern>RUMUSAN MASALAH</pattern>
+		<pattern>RUMUSAN</pattern>
 		<template>
 			Rumusan Masalah((br))((/br))
 Rumusan masalah berisi pernyataan mengenai permasalahan dan disertai pertanyaan penelitian. Pertanyaan penelitian yang diberikan adalah pertanyaan untuk mendapatkan jawaban atau solusi dari permasalahan penelitian. Rumusan masalah yang baik adalah:((/br))
@@ -1618,28 +1618,28 @@ c. Tidak multi tafsir
 	</category>
 
 	<category>
-		<pattern>* RUMUSAN MASALAH </pattern>
+		<pattern>* RUMUSAN </pattern>
 		<template>
-			<srai>RUMUSAN MASALAH</srai>
+			<srai>RUMUSAN</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> RUMUSAN MASALAH *</pattern>
+		<pattern> RUMUSAN *</pattern>
 		<template>
-			<srai>RUMUSAN MASALAH</srai>
+			<srai>RUMUSAN</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* RUMUSAN MASALAH *</pattern>
+		<pattern>* RUMUSAN *</pattern>
 		<template>
-			<srai>RUMUSAN MASALAH</srai>
+			<srai>RUMUSAN</srai>
 		</template>
 	</category>
  
 	<category> 
-		<pattern>BATASAN MASALAH</pattern>
+		<pattern>BATASAN</pattern>
 		<template>
 			Batasan Masalah Penelitian (jika diperlukan)((br))((/br))
 Ruang lingkup untuk membatasi lingkup permasalahan dengan memilih masalah khusus/ inti yang telah disebutkan di bagian identifikasi masalah, sehingga tidak terlalu luas untuk diselesaikan/ diberi solusi dalam penelitian yang akan dilakukan. Hal ini dilakukan agar pembahasan tidak terlalu luas kepada aspek-aspek yang jauh dari relevansi sehingga penelitian bisa lebih fokus untuk dilakukan. Batasan masalah dapat dibuat berdasarkan:((/br))
@@ -1653,23 +1653,23 @@ f. ...
 	</category>
 
 	<category>
-		<pattern>* BATASAN MASALAH </pattern>
+		<pattern>* BATASAN </pattern>
 		<template>
-			<srai>BATASAN MASALAH</srai>
+			<srai>BATASAN</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> BATASAN MASALAH *</pattern>
+		<pattern> BATASAN *</pattern>
 		<template>
-			<srai>BATASAN MASALAH</srai>
+			<srai>BATASAN</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* BATASAN MASALAH *</pattern>
+		<pattern>* BATASAN *</pattern>
 		<template>
-			<srai>BATASAN MASALAH</srai>
+			<srai>BATASAN</srai>
 		</template>
 	</category>
  
@@ -1763,7 +1763,7 @@ Tinjauan pustaka dapat memuat tiga bagian, yaitu: ((/br))1) kajian penelitian te
 	</category>
  
 	<category> 
-		<pattern>KAJIAN PENELITIAN TERDAHULU</pattern>
+		<pattern>KAJIAN PENELITIAN</pattern>
 		<template>
 			Kajian Penelitian Terdahulu((br))((/br))
 Membahas penelitian sebelumnya yang berkaitan dengan judul yang diambil sehingga bisa membedakan antara penelitian yang dilakukan dengan penelitian sebelumnya. ((/br))Kajian penelitian dipilih dari penelitian-penelitian maksimal 5 tahun terakhir sebanyak minimal 5, dapat diambil dari buku, jurnal ilmiah (nasional maupun internasional), laporan hasil penelitian, sumber lain yang dapat dipakai sebagai referensi untuk menunjang penelitian. ((/br))Kajian dapat juga dilengkapi dengan tabel yang membandingkan dengan penelitian sebelumnya. Kajian penelitian ini dapat dituliskan dalam bentuk sub-sub kajian penelitian terdahulu sesuai dengan topik/bahasan dalam tugas akhir yang diambil.
@@ -1771,28 +1771,28 @@ Membahas penelitian sebelumnya yang berkaitan dengan judul yang diambil sehingga
 	</category>
 
 	<category>
-		<pattern>* KAJIAN PENELITIAN TERDAHULU </pattern>
+		<pattern>* KAJIAN PENELITIAN </pattern>
 		<template>
-			<srai>KAJIAN PENELITIAN TERDAHULU</srai>
+			<srai>KAJIAN PENELITIAN</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> KAJIAN PENELITIAN TERDAHULU *</pattern>
+		<pattern> KAJIAN PENELITIAN *</pattern>
 		<template>
-			<srai>KAJIAN PENELITIAN TERDAHULU</srai>
+			<srai>KAJIAN PENELITIAN</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* KAJIAN PENELITIAN TERDAHULU *</pattern>
+		<pattern>* KAJIAN PENELITIAN *</pattern>
 		<template>
-			<srai>KAJIAN PENELITIAN TERDAHULU</srai>
+			<srai>KAJIAN PENELITIAN</srai>
 		</template>
 	</category>
  
 	<category> 
-		<pattern>KAJIAN SOFTWARE TERDAHULU</pattern>
+		<pattern>KAJIAN SOFTWARE</pattern>
 		<template>
 			Kajian Software Terdahulu (jika ada)((br))((/br))
 Sub bab ini bersifat opsional. Hanya dilengkapi jika ada software atau perangkat lunak sejenis yang beredar di pasaran/ internet dengan penelitian yang akan dilakukan. Mengkaji software dapat berupa menjelaskan metode kerja dari software tersebut dan fitur-fitur yang ada.
@@ -1800,23 +1800,23 @@ Sub bab ini bersifat opsional. Hanya dilengkapi jika ada software atau perangkat
 	</category>
 
 	<category>
-		<pattern>* KAJIAN SOFTWARE TERDAHULU </pattern>
+		<pattern>* KAJIAN SOFTWARE </pattern>
 		<template>
-			<srai>KAJIAN SOFTWARE TERDAHULU</srai>
+			<srai>KAJIAN SOFTWARE</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> KAJIAN SOFTWARE TERDAHULU *</pattern>
+		<pattern> KAJIAN SOFTWARE *</pattern>
 		<template>
-			<srai>KAJIAN SOFTWARE TERDAHULU</srai>
+			<srai>KAJIAN SOFTWARE</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* KAJIAN SOFTWARE TERDAHULU *</pattern>
+		<pattern>* KAJIAN SOFTWARE *</pattern>
 		<template>
-			<srai>KAJIAN SOFTWARE TERDAHULU</srai>
+			<srai>KAJIAN SOFTWARE</srai>
 		</template>
 	</category>
  
@@ -1913,7 +1913,7 @@ Jika diperlukan sub bab Hipotesis penelitian dapat ditambahkan di bab 2. ((/br))
 	</category>
  
 	<category> 
-		<pattern>METODE PENGUMPULAN DATA</pattern>
+		<pattern>PENGUMPULAN DATA</pattern>
 		<template>
 			Metode Pengumpulan Data((br))((/br))
 kumpulan prosedur atau teknik yang dilakukan peneliti untuk memperoleh data penelitian. ((/br))Pada bagian ini, mahasiswa harus menjabarkan data yang hendak didapatkan beserta teknik pengumpulan datanya.
@@ -1922,28 +1922,28 @@ Sumber data bisa berasal dari dua, yaitu data primer atau sekunder. ((/br))- Dat
 	</category>
 
 	<category>
-		<pattern>* METODE PENGUMPULAN DATA </pattern>
+		<pattern>* PENGUMPULAN DATA </pattern>
 		<template>
-			<srai>METODE PENGUMPULAN DATA</srai>
+			<srai>PENGUMPULAN DATA</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> METODE PENGUMPULAN DATA *</pattern>
+		<pattern> PENGUMPULAN DATA *</pattern>
 		<template>
-			<srai>METODE PENGUMPULAN DATA</srai>
+			<srai>PENGUMPULAN DATA</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* METODE PENGUMPULAN DATA *</pattern>
+		<pattern>* PENGUMPULAN DATA *</pattern>
 		<template>
-			<srai>METODE PENGUMPULAN DATA</srai>
+			<srai>PENGUMPULAN DATA</srai>
 		</template>
 	</category>
  
 	<category> 
-		<pattern>ALAT DAN BAHAN</pattern>
+		<pattern>ALAT</pattern>
 		<template>
 			Alat Dan Bahan((br))((/br))
 Alat dan bahan berisi deskripsi dari alat dan berbagai bahan yang digunakan dalam penelitian khususnya pada tahap eksperimen atau pengembangan perangkat lunak. ((/br))Jabarkan alat yang digunakan mulai dari spesifikasi perangkat keras dan lunak beserta bagaimana kaitannya dengan data yang diperoleh.
@@ -1951,23 +1951,23 @@ Alat dan bahan berisi deskripsi dari alat dan berbagai bahan yang digunakan dala
 	</category>
 
 	<category>
-		<pattern>* ALAT DAN BAHAN </pattern>
+		<pattern>* ALAT </pattern>
 		<template>
-			<srai>ALAT DAN BAHAN</srai>
+			<srai>ALAT</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> ALAT DAN BAHAN *</pattern>
+		<pattern> ALAT *</pattern>
 		<template>
-			<srai>ALAT DAN BAHAN</srai>
+			<srai>ALAT</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* ALAT DAN BAHAN *</pattern>
+		<pattern>* ALAT *</pattern>
 		<template>
-			<srai>ALAT DAN BAHAN</srai>
+			<srai>ALAT</srai>
 		</template>
 	</category>
  
@@ -2127,7 +2127,7 @@ Jelaskan secara rinci tahapan penelitian yang akan dilakukan beserta rencana lua
 	<category> 
 		<pattern>SISTEM CERDAS</pattern>
 		<template>
-			Mahasiswa menentukan topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal bidang sistem cerdas:((/br))
+			Mahasiswa menentukan topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal bidang sistem cerdas:((br))((/br))
 1. Pembelajaran Mesin (Machine Learning)((/br))
 2. Pengenalan Pola (Pattern Recognition)((/br))
 3. Pemrosesan Bahasa Alami (Natural Language Processing)((/br))
@@ -2140,7 +2140,7 @@ Jelaskan secara rinci tahapan penelitian yang akan dilakukan beserta rencana lua
 10. Data Mining((/br))
 11. Robotika((/br))
 12. Sistem pendukung keputusan (SPK)((/br))
-13. dan lain-lain((/br))
+13. dan lain-lain((br))((/br))
 Bidang sistem cerdas terus berkembang, dan ada banyak subbidang dan aplikasi yang terus muncul. Daftar di atas mencakup beberapa bidang yang umum terkait dengan sistem cerdas.
 		</template>
 	</category>
@@ -2169,7 +2169,7 @@ Bidang sistem cerdas terus berkembang, dan ada banyak subbidang dan aplikasi yan
 	<category> 
 		<pattern>RELATA</pattern>
 		<template>
-			Mahasiswa menentukan topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal bidang Relata:((/br))
+			Mahasiswa menentukan topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal bidang Relata:((br))((/br))
 1. Analisis dan Perancangan Perangkat Lunak((/br))
 2. Pengembangan Aplikasi Web((/br))
 3. Pengembangan Aplikasi Mobile((/br))
@@ -2420,7 +2420,7 @@ Bidang sistem cerdas terus berkembang, dan ada banyak subbidang dan aplikasi yan
 	<category> 
 		<pattern>SC</pattern>
 		<template>
-			Mahasiswa menentukan topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal bidang sistem cerdas:((/br))
+			Mahasiswa menentukan topik penelitian yang akan digunakan untuk matakuliah metopen (Boleh judul sendiri atau dari Dosen). Misal bidang sistem cerdas:((br))((/br))
 1. Pembelajaran Mesin (Machine Learning)((/br))
 2. Pengenalan Pola (Pattern Recognition)((/br))
 3. Pemrosesan Bahasa Alami (Natural Language Processing)((/br))
@@ -2433,7 +2433,7 @@ Bidang sistem cerdas terus berkembang, dan ada banyak subbidang dan aplikasi yan
 10. Data Mining((/br))
 11. Robotika((/br))
 12. Sistem pendukung keputusan (SPK)((/br))
-13. dan lain-lain((/br))
+13. dan lain-lain((br))((/br))
 Bidang sistem cerdas terus berkembang, dan ada banyak subbidang dan aplikasi yang terus muncul. Daftar di atas mencakup beberapa bidang yang umum terkait dengan sistem cerdas.
 		</template>
 	</category>
@@ -2462,7 +2462,7 @@ Bidang sistem cerdas terus berkembang, dan ada banyak subbidang dan aplikasi yan
 	<category> 
 		<pattern>BIDANG MINAT</pattern>
 		<template>
-			Bidang minat terdiri dari Sistem Cerdas dan Relata((/br))
+			Bidang minat terdiri dari Sistem Cerdas dan Relata((br))((/br))
 - Bidang Sistem Cerdas:((/br)) 1. Machine Learning((/br)) 2. Pengenalan Pola((/br)) 3. Pemrosesan Bahasa Alami((/br)) 4. Jaringan Saraf Tiruan((/br))5. anlisisis: Analisis Data, Analisis Prediktif, Analisis Sentimen, Analisis Citra dan Penglihatan Komputer, Analisis Tekstual, Analisis Big Data, dll.((/br))6. Sistem pendukung keputusan (SPK)((/br)) 7. dan lain-lain((/br)) Bidang sistem cerdas terus berkembang, dan ada banyak subbidang dan aplikasi yang terus muncul. Daftar di atas mencakup beberapa bidang yang umum terkait dengan sistem cerdas.((br))((/br))
 - Bidang Relata:((/br)) 1. Analisis dan Perancangan Perangkat Lunak((/br)) 2. Pengembangan Aplikasi Web((/br)) 3. Pengembangan Aplikasi Mobile((/br)) 4. Keamanan Komputer((/br)) 5. Jaringan Komputer((/br)) 6. Multimedia((/br))  7. Digital Forensics((/br)) 8. Game((/br)) 10. dan lain-lain
 		</template>
@@ -2492,7 +2492,7 @@ Bidang sistem cerdas terus berkembang, dan ada banyak subbidang dan aplikasi yan
 	<category> 
 		<pattern>PUSTAKA PENDUKUNG</pattern>
 		<template>
-			1. Mahasiswa melakukan pencarian minimal 3 pustaka pendukung, dapat berupa naskah terpublikasi di Jurnal Nasional/Internasional atau Seminar Nasional/Internasional((/br)) 2. Untuk Jurnal yang akan digunakan mahasiswa dapat mengidentifikasi nama penulis, judul naskah, volume, nomor dan tahun terbit. Untuk naskah yang dimuat di Seminar mahasiswa dapat mengidentifikasi nama penulis naskah publikasi, judul naskah, nama seminar, penyelenggara seminar dan tanggal pelaksanaan seminar. contoh jurnal dapat ditemukan di ((a href="https://sinta.kemdikbud.go.id/" target="_blank"))SINTA((/a)) atau ((a href="https://scholar.google.com/" target="_blank"))Google Scholar((/a))((/br)) 3. Mahasiswa melakukan review terhadap naskah publikasi pendukung penelitian metopen tersebut. silakan lihat tabel review penelitian terdahulu pada BAB 2 ((a href="https://tif.uad.ac.id/wp-content/uploads/Buku-Panduan-Skripsi-v.2.pdf" target="_blank")) Format Laporan((/a)) dan mengkonsultasikan dengan dosen wali.((/br))
+			1. Mahasiswa melakukan pencarian minimal 3 pustaka pendukung, dapat berupa naskah terpublikasi di Jurnal Nasional/Internasional atau Seminar Nasional/Internasional((br))((/br)) 2. Untuk Jurnal yang akan digunakan mahasiswa dapat mengidentifikasi nama penulis, judul naskah, volume, nomor dan tahun terbit. Untuk naskah yang dimuat di Seminar mahasiswa dapat mengidentifikasi nama penulis naskah publikasi, judul naskah, nama seminar, penyelenggara seminar dan tanggal pelaksanaan seminar. contoh jurnal dapat ditemukan di ((a href="https://sinta.kemdikbud.go.id/" target="_blank"))SINTA((/a)) atau ((a href="https://scholar.google.com/" target="_blank"))Google Scholar((/a))((br))((/br)) 3. Mahasiswa melakukan review terhadap naskah publikasi pendukung penelitian metopen tersebut. silakan lihat tabel review penelitian terdahulu pada BAB 2 ((a href="https://tif.uad.ac.id/wp-content/uploads/Buku-Panduan-Skripsi-v.2.pdf" target="_blank")) Format Laporan((/a)) dan mengkonsultasikan dengan dosen wali.((/br))
 ((a href="https://tif.uad.ac.id/wp-content/uploads/Template-Laporan-Skripsi-2022-v.2-1.docx" target="_blank"))Template laporan Skripsi ((/a))
 		</template>
 	</category>

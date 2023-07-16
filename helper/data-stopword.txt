@@ -62,7 +62,6 @@ begitukah
 begitulah
 begitupun
 bekerja
-belakang
 belakangan
 belum
 belumlah
@@ -370,7 +369,6 @@ mana
 manakala
 manalagi
 masa
-masalah
 masalahnya
 masih
 masihkah

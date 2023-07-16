@@ -11568,7 +11568,7 @@ kajai
 kajang
 kajangan
 kajen
-kaji
+kajian
 kak
 kakaban
 kakafoni
@@ -15207,7 +15207,7 @@ landai
 landak
 landang
 landap
-landas
+landasan
 landau
 landors
 landrad
@@ -15330,7 +15330,7 @@ lapir
 lapis
 lapislazuli
 lapo
-lapor
+laporan
 laptop
 lapuk
 lapun
@@ -28589,7 +28589,7 @@ tuil
 tuit
 tujah
 tuji
-tuju
+tujuan
 tujuh
 tujul
 tuk
@@ -29935,6 +29935,20 @@ pelaksanaan
 Pengajuan
 toefl
 similarity
+batasan
+pengumpulan
+tahapan
+relata
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
 
 
 https://github.com/sastrawi/sastrawi/tree/master

@@ -421,7 +421,6 @@ ajnabi
 ajnas
 ajojing
 ajre
-aju
 ajudan
 ajufan
 ajujah
@@ -3579,9 +3578,9 @@ bordir
 bordu
 boreal
 boreh
-bab1
-bab2
-bab3
+bab
+bab
+bab
 borek
 borgol
 borhan
@@ -29902,6 +29901,7 @@ okay
 bye
 link
 metopen
+tujuan
 1
 2
 3

@@ -489,9 +489,9 @@ def get_bot_response():
 def preprocess(text):
     # melakukan case folding
     text = text.lower()
-   
+    text = re.sub(r'[^\w\s]', '', text)
     # menghilangkan nomor dan tanda baca
-    text = re.sub(r'\d+', '', text)
+    # text = re.sub(r'\d+', '', text)
     text = text.translate(str.maketrans('', '', string.punctuation))
    
     # melakukan tokenizing
@@ -516,7 +516,7 @@ def preprocess(text):
     filtered_words = [word for word in stemmed_words if word not in stopwords]
    
     print("Hasil case folding: ", text)
-    print("Hasil penghilangan nomor dan tanda baca: ", text)
+    # print("Hasil penghilangan nomor dan tanda baca: ", text)
     print("Hasil tokenizing: ", words)
     print("Hasil koreksi : ", corrected_words)
     print("Hasil stemming: ", stemmed_words)
