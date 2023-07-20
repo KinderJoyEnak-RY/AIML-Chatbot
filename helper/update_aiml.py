@@ -111,11 +111,6 @@ def update_aiml_file():
 		<pattern>NAMAMU _</pattern>
 		<template>Namaku MetBot. Siapa namamu?</template>
 	</category>
-	<category>
-		<pattern>SIAPA *</pattern>
-		<template>Namaku MetBot. Siapa namamu?</template>
-		<that></that>
-	</category>
 
 	<category nocase="true">
 		<pattern>KAMU _</pattern>
@@ -191,12 +186,7 @@ def update_aiml_file():
       okay, <srai>GET NAME</srai> Terima kasih atas percakapannya!
   	</template>  
 	</category>
-	<category>
-		<pattern>TERIMAKASIH</pattern>
-		<template>
-				okay, <srai>GET NAME</srai> Terima kasih atas percakapannya!
-		</template>  
-	</category>
+
 	<category>
 		<pattern>TERIMA KASIH</pattern>
 		<template>

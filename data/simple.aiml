@@ -139,12 +139,7 @@
       okay, <srai>GET NAME</srai> Terima kasih atas percakapannya!
   	</template>  
 	</category>
-	<category>
-		<pattern>TERIMAKASIH</pattern>
-		<template>
-				okay, <srai>GET NAME</srai> Terima kasih atas percakapannya!
-		</template>  
-	</category>
+
 	<category>
 		<pattern>TERIMA KASIH</pattern>
 		<template>
@@ -330,34 +325,6 @@
 		<pattern>* TAHAP DAFTAR TOPIK *</pattern>
 		<template>
 			<srai>TAHAP DAFTAR TOPIK</srai>
-		</template>
-	</category>
- 
-	<category> 
-		<pattern>TOEFL</pattern>
-		<template>
-			Jika mahasiswa belum memiliki sertifikat TOEFL, maka dapat melakukan tes TOEFL terlebih dahulu. Informasi lengkap mengenai pendaftaran TOEFL dapat dilihat pada website ((a href = "https://adlc.uad.ac.id/adept-online/" target="_blank"))ADLC((/a))
-		</template>
-	</category>
-
-	<category>
-		<pattern>* TOEFL </pattern>
-		<template>
-			<srai>TOEFL</srai>
-		</template>
-	</category>
-
-	<category>
-		<pattern> TOEFL *</pattern>
-		<template>
-			<srai>TOEFL</srai>
-		</template>
-	</category>
-
-	<category>
-		<pattern>* TOEFL *</pattern>
-		<template>
-			<srai>TOEFL</srai>
 		</template>
 	</category>
  
@@ -716,7 +683,7 @@ UTS dan UAS wajib dalam kuliah metopen. Artinya jika tidak mengikuti salah satun
 	</category>
  
 	<category> 
-		<pattern>AJU SEMINAR PROPOSAL</pattern>
+		<pattern>PENGAJUAN SEMINAR PROPOSAL</pattern>
 		<template>
 			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : 
 ((a href = "https://s.uad.id/reg_semprop_tif" target="_blank"))Pendaftaran Seminar Proposal((/a))((br))((/br))
@@ -733,28 +700,28 @@ Persyaratannya:((/br))
 	</category>
 
 	<category>
-		<pattern>* AJU SEMINAR PROPOSAL </pattern>
+		<pattern>* PENGAJUAN SEMINAR PROPOSAL </pattern>
 		<template>
-			<srai>AJU SEMINAR PROPOSAL</srai>
+			<srai>PENGAJUAN SEMINAR PROPOSAL</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> AJU SEMINAR PROPOSAL *</pattern>
+		<pattern> PENGAJUAN SEMINAR PROPOSAL *</pattern>
 		<template>
-			<srai>AJU SEMINAR PROPOSAL</srai>
+			<srai>PENGAJUAN SEMINAR PROPOSAL</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* AJU SEMINAR PROPOSAL *</pattern>
+		<pattern>* PENGAJUAN SEMINAR PROPOSAL *</pattern>
 		<template>
-			<srai>AJU SEMINAR PROPOSAL</srai>
+			<srai>PENGAJUAN SEMINAR PROPOSAL</srai>
 		</template>
 	</category>
  
 	<category> 
-		<pattern>AJU SEMPRO</pattern>
+		<pattern>PENGAJUAN SEMPRO</pattern>
 		<template>
 			Pengajuan Seminar Proposal dilakukan secara online dengan mendaftar melalui klik link berikut : 
 ((a href = "https://s.uad.id/reg_semprop_tif" target="_blank"))Pendaftaran Seminar Proposal((/a))((br))((/br))
@@ -771,23 +738,23 @@ Persyaratannya:((/br))
 	</category>
 
 	<category>
-		<pattern>* AJU SEMPRO </pattern>
+		<pattern>* PENGAJUAN SEMPRO </pattern>
 		<template>
-			<srai>AJU SEMPRO</srai>
+			<srai>PENGAJUAN SEMPRO</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern> AJU SEMPRO *</pattern>
+		<pattern> PENGAJUAN SEMPRO *</pattern>
 		<template>
-			<srai>AJU SEMPRO</srai>
+			<srai>PENGAJUAN SEMPRO</srai>
 		</template>
 	</category>
 
 	<category>
-		<pattern>* AJU SEMPRO *</pattern>
+		<pattern>* PENGAJUAN SEMPRO *</pattern>
 		<template>
-			<srai>AJU SEMPRO</srai>
+			<srai>PENGAJUAN SEMPRO</srai>
 		</template>
 	</category>
  
@@ -824,6 +791,34 @@ Persyaratannya:((/br))
 		<pattern>* SYARAT *</pattern>
 		<template>
 			<srai>SYARAT</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>TOEFL</pattern>
+		<template>
+			Jika mahasiswa belum memiliki sertifikat TOEFL, maka dapat melakukan tes TOEFL terlebih dahulu. Informasi lengkap mengenai pendaftaran TOEFL dapat dilihat pada website ((a href = "https://adlc.uad.ac.id/adept-online/" target="_blank"))ADLC((/a))
+		</template>
+	</category>
+
+	<category>
+		<pattern>* TOEFL </pattern>
+		<template>
+			<srai>TOEFL</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> TOEFL *</pattern>
+		<template>
+			<srai>TOEFL</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* TOEFL *</pattern>
+		<template>
+			<srai>TOEFL</srai>
 		</template>
 	</category>
  
@@ -2521,7 +2516,7 @@ Bidang sistem cerdas terus berkembang, dan ada banyak subbidang dan aplikasi yan
 	<category> 
 		<pattern>JURNAL</pattern>
 		<template>
-			1. Mahasiswa melakukan pencarian minimal 3 pustaka pendukung, dapat berupa naskah terpublikasi di Jurnal Nasional/Internasional atau Seminar Nasional/Internasional((/br)) 2. Untuk Jurnal yang akan digunakan mahasiswa dapat mengidentifikasi nama penulis, judul naskah, volume, nomor dan tahun terbit. Untuk naskah yang dimuat di Seminar mahasiswa dapat mengidentifikasi nama penulis naskah publikasi, judul naskah, nama seminar, penyelenggara seminar dan tanggal pelaksanaan seminar. contoh jurnal dapat ditemukan di ((a href="https://sinta.kemdikbud.go.id/" target="_blank"))SINTA((/a)) atau ((a href="https://scholar.google.com/" target="_blank"))Google Scholar((/a))((/br)) 3. Mahasiswa melakukan review terhadap naskah publikasi pendukung penelitian metopen tersebut. silakan lihat tabel review penelitian terdahulu pada BAB 2 ((a href="https://tif.uad.ac.id/wp-content/uploads/Buku-Panduan-Skripsi-v.2.pdf" target="_blank")) Format Laporan((/a)) dan mengkonsultasikan dengan dosen wali.((/br))
+			1. Mahasiswa melakukan pencarian minimal 3 pustaka pendukung, dapat berupa naskah terpublikasi di Jurnal Nasional/Internasional atau Seminar Nasional/Internasional((br))((/br)) 2. Untuk Jurnal yang akan digunakan mahasiswa dapat mengidentifikasi nama penulis, judul naskah, volume, nomor dan tahun terbit. Untuk naskah yang dimuat di Seminar mahasiswa dapat mengidentifikasi nama penulis naskah publikasi, judul naskah, nama seminar, penyelenggara seminar dan tanggal pelaksanaan seminar. contoh jurnal dapat ditemukan di ((a href="https://sinta.kemdikbud.go.id/" target="_blank"))SINTA((/a)) atau ((a href="https://scholar.google.com/" target="_blank"))Google Scholar((/a))((br))((/br)) 3. Mahasiswa melakukan review terhadap naskah publikasi pendukung penelitian metopen tersebut. silakan lihat tabel review penelitian terdahulu pada BAB 2 ((a href="https://tif.uad.ac.id/wp-content/uploads/Buku-Panduan-Skripsi-v.2.pdf" target="_blank")) Format Laporan((/a)) dan mengkonsultasikan dengan dosen wali.((/br))
 ((a href="https://tif.uad.ac.id/wp-content/uploads/Template-Laporan-Skripsi-2022-v.2-1.docx" target="_blank"))Template laporan Skripsi ((/a))
 		</template>
 	</category>
@@ -2631,6 +2626,34 @@ Disini kamu bisa bertanya Seputar Metodologi Penelitian :)
 		<pattern>* HAI *</pattern>
 		<template>
 			<srai>HAI</srai>
+		</template>
+	</category>
+ 
+	<category> 
+		<pattern>TERIMAKASIH</pattern>
+		<template>
+			okay, ((srai))GET NAME((/srai)) Terima kasih atas percakapannya!
+		</template>
+	</category>
+
+	<category>
+		<pattern>* TERIMAKASIH </pattern>
+		<template>
+			<srai>TERIMAKASIH</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern> TERIMAKASIH *</pattern>
+		<template>
+			<srai>TERIMAKASIH</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* TERIMAKASIH *</pattern>
+		<template>
+			<srai>TERIMAKASIH</srai>
 		</template>
 	</category>
 

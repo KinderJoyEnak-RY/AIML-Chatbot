@@ -29744,7 +29744,6 @@ xilol
 xilologi
 xilonit
 xilosa
-yad
 yahud
 yahudi
 yahudiah
@@ -29930,14 +29929,11 @@ zurafah
 zuriah
 zus
 penelitian
-pendukung
-pelaksanaan
-Pengajuan
+pengajuan
 toefl
 similarity
 batasan
 pengumpulan
-tahapan
 relata
 1
 2

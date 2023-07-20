@@ -451,7 +451,7 @@ def response_delete(id):
 
 
 DEFAULT_RESPONSES = ["Maaf, saya tidak dapat memahami pertanyaan Anda🙏 mohon sertakan konteks/informasi dasar pada pertanyaan anda🙏"]
-excluded_patterns = ['nama ', 'nama saya ', 'aku ', 'saya ', 'namamu', 'siapa', 'kamu', 'namaku']
+excluded_patterns = ['nama ', 'nama saya ', 'aku ', 'saya ', 'namamu', 'kamu', 'namaku']
 
 # membuat stemmer
 factory = StemmerFactory()

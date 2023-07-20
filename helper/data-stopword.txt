@@ -128,7 +128,6 @@ bukanlah
 bukannya
 bulan
 bung
-cara
 caranya
 cukup
 cukupkah
@@ -493,6 +492,7 @@ pastilah
 penting
 pentingnya
 pendidikan
+pendukung
 didik
 per
 percuma
@@ -764,8 +764,6 @@ iya
 ya
 nama
 helo
-pengkajian
-pengajuan
 aja
 sih
 
