@@ -14308,6 +14308,7 @@ koordinasi
 koordinat
 koordinatif
 koordinator
+koor
 kop
 kopah
 kopaiba
@@ -20586,6 +20587,7 @@ pengos
 penguin
 pengulun
 pengumpulan
+penelitian
 peni
 peniaram
 pening
@@ -29915,6 +29917,7 @@ similarity
 template
 rumusan
 toefl
+dospem
 1
 2
 3
